@@ -19,6 +19,7 @@ class HueController {
     private var _token as Lang.String?;
     private var _refreshToken as Lang.String?;
     private var _tokenExpires as Lang.Number?;
+    private var _lastColor as Lang.Number?;
 
     function initialize() {
         _clientId = WatchUi.loadResource(Rez.Strings.clientId) as Lang.String;
@@ -260,12 +261,19 @@ class HueController {
                 var roomsData = dataDict["data"] as Lang.Array<Lang.Dictionary>;
                 for (var i = 0; i < roomsData.size(); i++) {
                     var roomData = roomsData[i];
-                    if (roomData.hasKey("type") && "room".equals(roomData["type"])) {
-                        var metadata = roomData["metadata"] as Lang.Dictionary;
-                        rooms.add({
-                            "id" => roomData["id"],
-                            "name" => metadata["name"]
-                        });
+                    if (roomData.hasKey("type") && "room".equals(roomData["type"]) && roomData.hasKey("services")) {
+                        var services = roomData["services"] as Lang.Array<Lang.Dictionary>;
+                        for (var j = 0; j < services.size(); j++) {
+                            var service = services[j];
+                            if (service.hasKey("rtype") && "grouped_light".equals(service["rtype"])) {
+                                var metadata = roomData["metadata"] as Lang.Dictionary;
+                                rooms.add({
+                                    "id" => service["rid"], // Use the grouped_light resource ID
+                                    "name" => metadata["name"]
+                                });
+                                break; // Found the grouped_light, move to the next room
+                            }
+                        }
                     }
                 }
             }
@@ -282,7 +290,143 @@ class HueController {
         }
     }
 
+    public function setRoomColor(roomId as Lang.String, color as Lang.Number) as Void {
+        var accessToken = Application.Storage.getValue("accessToken");
+        var appKey = Application.Storage.getValue("hueApplicationKey");
+
+        if (accessToken == null || appKey == null) {
+            System.println("Cannot set room color, missing tokens or app key.");
+            return;
+        }
+
+        // Convert Graphics color to Hue XY color space
+        var xy = convertColorToHueXY(color);
+
+        var url = "https://api.meethue.com/route/clip/v2/resource/grouped_light/" + roomId;
+        var params = {
+            "color" => {
+                "xy" => {
+                    "x" => xy[0],
+                    "y" => xy[1]
+                }
+            }
+        };
+        var options = {
+            :method => Communications.HTTP_REQUEST_METHOD_PUT,
+            :headers => {
+                "Authorization" => "Bearer " + accessToken,
+                "hue-application-key" => appKey,
+                "Content-Type" => Communications.REQUEST_CONTENT_TYPE_JSON
+            },
+            :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
+        };
+
+        System.println("Setting room color. URL: " + url);
+        Communications.makeWebRequest(url, params, options, method(:onSetRoomColorResponse));
+    }
+
+    public function onSetRoomColorResponse(responseCode as Lang.Number, data as Null or Lang.Dictionary) as Void {
+        System.println("onSetRoomColorResponse triggered. Code: " + responseCode);
+        if (responseCode != 200) {
+            System.println("Failed to set room color. Response: " + data);
+        }
+    }
+
+    // This is a simplified conversion. For accurate colors, a more complex RGB -> CIE 1931 conversion is needed.
+    private function convertColorToHueXY(color as Lang.Number) as Lang.Array<Lang.Float> {
+        var red = (color >> 16) & 0xFF;
+        var green = (color >> 8) & 0xFF;
+        var blue = color & 0xFF;
+
+        if (red == 0xAA && green == 0xAA && blue == 0xAA) { // Approx Gray
+            return [0.3227f, 0.329f];
+        }
+
+        // Normalize to 0-1
+        var r = red / 255.0f;
+        var g = green / 255.0f;
+        var b = blue / 255.0f;
+
+        // Apply gamma correction
+        r = (r > 0.04045) ? Math.pow((r + 0.055) / (1.0 + 0.055), 2.4).toFloat() : (r / 12.92);
+        g = (g > 0.04045) ? Math.pow((g + 0.055) / (1.0 + 0.055), 2.4).toFloat() : (g / 12.92);
+        b = (b > 0.04045) ? Math.pow((b + 0.055) / (1.0 + 0.055), 2.4).toFloat() : (b / 12.92);
+
+        // Convert to CIE XYZ
+        var X = r * 0.664511 + g * 0.154324 + b * 0.162028;
+        var Y = r * 0.283881 + g * 0.668433 + b * 0.047685;
+        var Z = r * 0.000088 + g * 0.072310 + b * 0.986039;
+
+        var sum = X + Y + Z;
+        if (sum == 0) {
+            return [0.0f, 0.0f]; // Should not happen with colors
+        }
+
+        var x = X / sum;
+        var y = Y / sum;
+
+        return [x, y];
+    }
+
+ 
+ // Helper function to interpolate between two colors
+private function interpolateColor(startColor as Lang.Number, endColor as Lang.Number, startVal as Lang.Number, endVal as Lang.Number, currentVal as Lang.Number) as Lang.Number {
+    var factor = (currentVal - startVal).toFloat() / (endVal - startVal).toFloat();
+
+    var startR = (startColor >> 16) & 0xFF;
+    var startG = (startColor >> 8) & 0xFF;
+    var startB = startColor & 0xFF;
+
+    var endR = (endColor >> 16) & 0xFF;
+    var endG = (endColor >> 8) & 0xFF;
+    var endB = endColor & 0xFF;
+
+    var newR = (startR + factor * (endR - startR)).toNumber();
+    var newG = (startG + factor * (endG - startG)).toNumber();
+    var newB = (startB + factor * (endB - startB)).toNumber();
+
+    return Graphics.createColor(255, newR, newG, newB);
+}
+
+    private function calculateColorForHr(hr as Lang.Number) as Lang.Number {
+        // Define HR zones and colors
+        var COLOR_GRAY = Graphics.COLOR_LT_GRAY; // 0xAAAAAA
+        var COLOR_BLUE = 0x0000FF;
+        var COLOR_GREEN = 0x00FF00;
+        var COLOR_ORANGE = 0xFFAA00;
+        var COLOR_RED = Graphics.COLOR_RED; // 0xFF0000
+
+        if (hr <= 60) {
+            return COLOR_GRAY;
+        } else if (hr <= 80) { // Gray to Blue
+            return interpolateColor(COLOR_GRAY, COLOR_BLUE, 61, 80, hr);
+        } else if (hr <= 110) { // Blue to Green
+            return interpolateColor(COLOR_BLUE, COLOR_GREEN, 81, 110, hr);
+        } else if (hr <= 140) { // Green to Orange
+            return interpolateColor(COLOR_GREEN, COLOR_ORANGE, 111, 140, hr);
+        } else if (hr <= 170) { // Orange to Red
+            return interpolateColor(COLOR_ORANGE, COLOR_RED, 141, 170, hr);
+        } else { // Above 170
+            return COLOR_RED;
+        }
+    }
+
     function setHeartRate(hr as Lang.Number) as Void {
+        var newColor = calculateColorForHr(hr);
+
+        // Only send API request if the color has changed
+        if (_lastColor == null || _lastColor != newColor) {
+            _lastColor = newColor;
+            var selectedRoomId = Application.Storage.getValue("selectedRoomId");
+            if (selectedRoomId != null) {
+                setRoomColor(selectedRoomId, newColor);
+            }
+        }
+
+        // Tell the view to update its display
+        if (_view != null) {
+            _view.updateHeartRateDisplay(hr, newColor);
+        }
     }
 
     function setSelectedRoomId(roomId as Lang.String) as Void {

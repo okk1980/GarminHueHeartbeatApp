@@ -3,7 +3,7 @@ using Toybox.System;
 using Toybox.Graphics;
 using Toybox.Application;
 using Toybox.Lang;
-using Toybox.Timer;
+using Toybox.Sensor;
 
 class GarminHueHeartbeatAppView extends WatchUi.View {
     // Define constants for the states
@@ -19,7 +19,9 @@ class GarminHueHeartbeatAppView extends WatchUi.View {
     private var _controller as HueController;
     private var _message as Lang.String = "Initializing...";
     private var _textLabel as WatchUi.Text?;
+    private var _hrLabel as WatchUi.Text?;
     private var _rooms as Lang.Array?;
+    private var _currentColor as Lang.Number?;
 
     function initialize(hueController as HueController) {
         View.initialize();
@@ -39,6 +41,7 @@ class GarminHueHeartbeatAppView extends WatchUi.View {
     function onLayout(dc as Graphics.Dc) as Void {
         setLayout(Rez.Layouts.MainLayout(dc));
         _textLabel = findDrawableById("text_label") as WatchUi.Text;
+        _hrLabel = findDrawableById("HeartRateLabel") as WatchUi.Text;
     }
 
     function onShow() as Void {
@@ -48,6 +51,7 @@ class GarminHueHeartbeatAppView extends WatchUi.View {
 
     function onHide() as Void {
         System.println("View onHide");
+        Sensor.setEnabledSensors([]);
     }
 
     // Update the view
@@ -56,6 +60,30 @@ class GarminHueHeartbeatAppView extends WatchUi.View {
             _textLabel.setText(_message);
         }
         View.onUpdate(dc);
+
+        if (_currentState == STATE_RUNNING && _currentColor != null) {
+            dc.setColor(_currentColor, Graphics.COLOR_TRANSPARENT);
+            dc.fillCircle(dc.getWidth() / 2, dc.getHeight() / 2 + 40, 20);
+        }
+    }
+
+    function onSensorData(sensorInfo as Sensor.Info) as Void {
+        var hr = 0;
+        if (sensorInfo.heartRate != null) {
+            hr = sensorInfo.heartRate;
+        }
+        _controller.setHeartRate(hr);
+    }
+
+    public function updateHeartRateDisplay(hr as Lang.Number, color as Lang.Number) as Void {
+        _currentColor = color;
+        if (_hrLabel != null) {
+            _hrLabel.setText("HR: " + hr.toString());
+        } else {
+            // Fallback if the label isn't found
+            _message = "HR: " + hr.toString();
+        }
+        WatchUi.requestUpdate();
     }
 
     function setMessage(message as Lang.String) as Void {
@@ -79,7 +107,6 @@ class GarminHueHeartbeatAppView extends WatchUi.View {
             if (_controller.hasTokens()) {
                 var appKey = Application.Storage.getValue("hueApplicationKey");
                 if (appKey == null) {
-                    // If we have OAuth tokens but no app key, we need to register.
                     setState(STATE_REGISTERING);
                 } else {
                     var selectedRoomId = Application.Storage.getValue("selectedRoomId");
@@ -102,12 +129,10 @@ class GarminHueHeartbeatAppView extends WatchUi.View {
                 var menu = new WatchUi.Menu2({:title=>"Select a Room"});
                 for (var i = 0; i < _rooms.size(); i++) {
                     var room = _rooms[i] as Lang.Dictionary;
-                    var roomName = room["name"] as Lang.String;
-                    menu.addItem(new WatchUi.MenuItem(roomName, null, i, {}));
+                    menu.addItem(new WatchUi.MenuItem(room["name"], null, i, {}));
                 }
                 var delegate = new GarminHueHeartbeatAppMenuDelegate(_controller, self);
                 WatchUi.pushView(menu, delegate, WatchUi.SLIDE_UP);
-                _currentState = STATE_RUNNING; 
             } else {
                 _message = "No rooms found.";
                 setState(STATE_ERROR);
@@ -118,12 +143,13 @@ class GarminHueHeartbeatAppView extends WatchUi.View {
             var selectedRoomId = Application.Storage.getValue("selectedRoomId");
             if (selectedRoomId != null) {
                  _message = "Monitoring HR...";
+                 Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
+                 Sensor.enableSensorEvents(method(:onSensorData));
             } else {
                 _message = "No room selected.\nPress Menu.";
             }
         } else if (state == STATE_REGISTERING) {
             _message = "Registering app...";
-            // This will trigger the chained registration process in the controller
             _controller.startRegistration(); 
         }
         System.println("runLogic: "+_message);
