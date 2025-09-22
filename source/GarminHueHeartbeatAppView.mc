@@ -45,7 +45,9 @@ class GarminHueHeartbeatAppView extends WatchUi.View {
     }
 
     function onShow() as Void {
-        System.println("View: onShow triggered. Current state: " + _currentState);
+        // Force re-evaluation of the state every time the app is shown
+        _currentState = STATE_INITIALIZING;
+        System.println("View: onShow triggered. Resetting state to INITIALIZING.");
         runLogic();
     }
 
@@ -120,7 +122,9 @@ class GarminHueHeartbeatAppView extends WatchUi.View {
                 setState(STATE_LOGGED_OUT);
             }
         } else if (state == STATE_LOGGED_OUT) {
-             _message = "Logged Out.\nPress Menu";
+            if (_hrLabel != null) {
+                _hrLabel.setText("open settings\nfor login");
+            }
         } else if (state == STATE_FETCHING_DATA) {
             _message = "Fetching rooms...";
             _controller.getRooms();
