@@ -1,0 +1,1801 @@
+[ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Application,1,13,24]; ]
+using Toybox.Application;
+[ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Authentication,2,13,27]; ]
+using Toybox.Authentication;
+[ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Communications,3,13,27]; ]
+using Toybox.Communications;
+[ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [System,4,13,19]; ]
+using Toybox.System;
+[ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [WatchUi,5,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [Lang,6,13,17]; ]
+using Toybox.Lang;
+[ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 7; @symbol_usingdef<0> = [Toybox,7,6,12]; @symbol_usingdef<1> = [StringUtil,7,13,23]; ]
+using Toybox.StringUtil;
+[ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 8; @symbol_usingdef<0> = [Toybox,8,6,12]; @symbol_usingdef<1> = [PersistedContent,8,13,29]; ]
+using Toybox.PersistedContent;
+[ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 10; @symbol_classdef = [HueController,10,6,19]; ]
+class HueController {
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 10; ]
+    <init> {
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 10; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 11; @position = 16; @symbol_vardef = [_view,11,16,21]; @symbol_type<0> = [GarminHueHeartbeatAppView,11,25,50]; ]
+    private
+    var _view as GarminHueHeartbeatAppView or Null;
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 14; @position = 16; @symbol_vardef = [_clientId,14,16,25]; @symbol_type<0> = [Lang,14,29,33]; @symbol_type<1> = [String,14,34,40]; ]
+    private
+    var _clientId as Lang.String;
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 15; @position = 16; @symbol_vardef = [_clientSecret,15,16,29]; @symbol_type<0> = [Lang,15,33,37]; @symbol_type<1> = [String,15,38,44]; ]
+    private
+    var _clientSecret as Lang.String;
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 16; @position = 16; @symbol_vardef = [_redirectUrl,16,16,28]; @symbol_type<0> = [Lang,16,32,36]; @symbol_type<1> = [String,16,37,43]; ]
+    private
+    var _redirectUrl as Lang.String;
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 19; @position = 16; @symbol_vardef = [_token,19,16,22]; @symbol_type<0> = [Lang,19,26,30]; @symbol_type<1> = [String,19,31,37]; ]
+    private
+    var _token as Lang.String or Null;
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 20; @position = 16; @symbol_vardef = [_refreshToken,20,16,29]; @symbol_type<0> = [Lang,20,33,37]; @symbol_type<1> = [String,20,38,44]; ]
+    private
+    var _refreshToken as Lang.String or Null;
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 21; @position = 16; @symbol_vardef = [_tokenExpires,21,16,29]; @symbol_type<0> = [Lang,21,33,37]; @symbol_type<1> = [Number,21,38,44]; ]
+    private
+    var _tokenExpires as Lang.Number or Null;
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 23; @symbol_functiondef = [initialize,23,13,23]; ]
+    function initialize() as Void {
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_23_26_27_4_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 24 8 ]
+        symbol [ WatchUi %tmp.1 24 20 27 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.2 24 28 40 ];
+        %tmp.2 = getv function %tmp.1 :loadResource;
+        symbol [ Rez %tmp.4 24 41 44 ];
+        %tmp.4 = getv ? :Rez;
+        symbol [ Strings %tmp.5 24 45 52 ];
+        %tmp.5 = getv %tmp.4 :Strings;
+        symbol [ clientId %tmp.6 24 53 61 ];
+        %tmp.6 = getv %tmp.5 :clientId;
+        %tmp.7 = invoke %tmp.1 %tmp.2(%tmp.6);
+        %tmp.8 = as %tmp.7 Lang.String;
+        symbol [ Lang %tmp.8 24 66 70 ];
+        symbol [ String %tmp.8 24 71 77 ];
+        symbol [ _clientId ? 24 8 17 ];
+        putv self :_clientId %tmp.8;
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 25 8 ]
+        symbol [ WatchUi %tmp.9 25 24 31 ];
+        %tmp.9 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.10 25 32 44 ];
+        %tmp.10 = getv function %tmp.9 :loadResource;
+        symbol [ Rez %tmp.12 25 45 48 ];
+        %tmp.12 = getv ? :Rez;
+        symbol [ Strings %tmp.13 25 49 56 ];
+        %tmp.13 = getv %tmp.12 :Strings;
+        symbol [ clientSecret %tmp.14 25 57 69 ];
+        %tmp.14 = getv %tmp.13 :clientSecret;
+        %tmp.15 = invoke %tmp.9 %tmp.10(%tmp.14);
+        %tmp.16 = as %tmp.15 Lang.String;
+        symbol [ Lang %tmp.16 25 74 78 ];
+        symbol [ String %tmp.16 25 79 85 ];
+        symbol [ _clientSecret ? 25 8 21 ];
+        putv self :_clientSecret %tmp.16;
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 26 8 ]
+        %tmp.17 = "https://localhost";
+        symbol [ _redirectUrl ? 26 8 20 ];
+        putv self :_redirectUrl %tmp.17;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_23_26_27_4_stop:
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 29; @symbol_functiondef = [setView,29,13,20]; @symbol_param<0> = [view,29,21,25]; @symbol_param<0>_type<0> = [GarminHueHeartbeatAppView,29,29,54]; ]
+    function setView(view as GarminHueHeartbeatAppView) as Void {
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_29_64_31_4_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 30 8 ]
+        %tmp.1 = lgetv %view;
+        symbol [ view %tmp.1 30 16 20 ];
+        symbol [ _view ? 30 8 13 ];
+        putv self :_view %tmp.1;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_29_64_31_4_stop:
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 33; @symbol_functiondef = [onOAuthResponse,33,20,35]; @symbol_param<0> = [data,33,36,40]; @symbol_param<0>_type<0> = [Lang,33,52,56]; @symbol_param<0>_type<1> = [Dictionary,33,57,67]; ]
+    public
+    function onOAuthResponse(data as Null or Lang.Dictionary) as Void {
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_33_77_45_4_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 34 8 ]
+        symbol [ System %tmp.1 34 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 34 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "Controller: onOAuthResponse triggered with auth code.";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 35 8 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_8_44_8_if_stmt:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_12_35_46_begin:
+        %tmp.4 = lgetv %data;
+        symbol [ data %tmp.4 35 12 16 ];
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_8_44_8_if_else_false;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_28_35_46_true:
+        %tmp.7 = lgetv %data;
+        symbol [ data %tmp.7 35 28 32 ];
+        %tmp.8 = as %tmp.7 { (!Null) };
+        symbol [ hasKey %tmp.9 35 33 39 ];
+        %tmp.9 = getv function %tmp.8 :hasKey;
+        %tmp.10 = "code";
+        %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
+        push %tmp.11;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_28_35_46_end:
+        %tmp.12 = phi [%tmp.6 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_12_35_46_begin] [%tmp.11 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_28_35_46_true] [%tmp.12 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_28_35_46_end];
+        bf %tmp.12 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_8_44_8_if_else_false;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_8_44_8_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_49_38_8_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 36 12 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_49_38_8_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_49_38_8_stop" ]
+        %authCode.1 = local;
+        symbol [ authCode %authCode.1 36 16 24 ];
+        %tmp.13 = lgetv %data;
+        symbol [ data %tmp.13 36 27 31 ];
+        %tmp.14 = as %tmp.13 { (!Null) };
+        %tmp.15 = "code";
+        %tmp.16 = agetv %tmp.14 %tmp.15;
+        lputv %authCode.1 %tmp.16;
+        symbol [ authCode %authCode.1 36 16 24 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 37 12 ]
+        %tmp.17 = self;
+        symbol [ exchangeCodeForToken %tmp.18 37 12 32 ];
+        %tmp.18 = getv function %tmp.17 :exchangeCodeForToken;
+        %tmp.19 = lgetv %authCode.1;
+        symbol [ authCode %tmp.19 37 33 41 ];
+        invoke %tmp.17 %tmp.18(%tmp.19);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_49_38_8_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_8_44_8_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_8_44_8_if_else_false:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_38_15_44_8_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 39 12 ]
+        symbol [ System %tmp.20 39 12 18 ];
+        %tmp.20 = getm $.Toybox.System;
+        symbol [ println %tmp.21 39 19 26 ];
+        %tmp.21 = getv function %tmp.20 :println;
+        %tmp.22 = "OAuth failed: No authorization code in response.";
+        invoke %tmp.20 %tmp.21(%tmp.22);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 40 12 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_40_12_43_12_if_stmt:
+        symbol [ _view %tmp.24 40 16 21 ];
+        %tmp.24 = getv ? :_view;
+        %tmp.25 = null;
+        %tmp.26 = ne %tmp.24 %tmp.25;
+        bf %tmp.26 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_40_12_43_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_40_12_43_12_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_40_31_43_12_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 41 16 ]
+        symbol [ _view %tmp.28 41 16 21 ];
+        %tmp.28 = getv ? :_view;
+        %tmp.29 = as %tmp.28 { (!Null) };
+        symbol [ setMessage %tmp.30 41 22 32 ];
+        %tmp.30 = getv function %tmp.29 :setMessage;
+        %tmp.31 = "Login Failed\nNo Auth Code";
+        invoke %tmp.29 %tmp.30(%tmp.31);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 42 16 ]
+        symbol [ _view %tmp.33 42 16 21 ];
+        %tmp.33 = getv ? :_view;
+        symbol [ setState %tmp.34 42 22 30 ];
+        %tmp.34 = getv function %tmp.33 :setState;
+        symbol [ _view %tmp.36 42 32 37 ];
+        %tmp.36 = getv ? :_view;
+        %tmp.37 = as %tmp.36 GarminHueHeartbeatAppView;
+        symbol [ GarminHueHeartbeatAppView %tmp.37 42 41 66 ];
+        symbol [ STATE_ERROR %tmp.38 42 68 79 ];
+        %tmp.38 = getv %tmp.37 :STATE_ERROR;
+        invoke %tmp.33 %tmp.34(%tmp.38);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_40_31_43_12_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_40_12_43_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_40_12_43_12_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_38_15_44_8_stop:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_35_8_44_8_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_33_77_45_4_stop:
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 47; @symbol_functiondef = [exchangeCodeForToken,47,13,33]; @symbol_param<0> = [authCode,47,34,42]; @symbol_param<0>_type<0> = [Lang,47,46,50]; @symbol_param<0>_type<1> = [String,47,51,57]; ]
+    function exchangeCodeForToken(authCode as Lang.String) as Void {
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_47_67_69_4_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 48 8 ]
+        symbol [ System %tmp.1 48 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 48 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "Exchanging authorization code for token.";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 49 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_47_67_69_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_47_67_69_4_stop" ]
+        %url.1 = local;
+        symbol [ url %url.1 49 12 15 ];
+        %tmp.4 = "https://api.meethue.com/v2/oauth2/token";
+        lputv %url.1 %tmp.4;
+        symbol [ url %url.1 49 12 15 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 50 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_47_67_69_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_47_67_69_4_stop" ]
+        %params.2 = local;
+        symbol [ params %params.2 50 12 18 ];
+        %tmp.5 = newd 2;
+        %tmp.6 = "grant_type";
+        %tmp.7 = "authorization_code";
+        %tmp.8 = dup %tmp.5;
+        %tmp.9 = aputv %tmp.8 %tmp.6 %tmp.7;
+        %tmp.10 = "code";
+        %tmp.11 = lgetv %authCode;
+        symbol [ authCode %tmp.11 52 22 30 ];
+        %tmp.12 = dup %tmp.9;
+        %tmp.13 = aputv %tmp.12 %tmp.10 %tmp.11;
+        lputv %params.2 %tmp.13;
+        symbol [ params %params.2 50 12 18 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 57 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_47_67_69_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_47_67_69_4_stop" ]
+        %basicAuth.3 = local;
+        symbol [ basicAuth %basicAuth.3 57 12 21 ];
+        %tmp.14 = "Basic ";
+        symbol [ StringUtil %tmp.15 57 35 45 ];
+        %tmp.15 = getm $.Toybox.StringUtil;
+        symbol [ encodeBase64 %tmp.16 57 46 58 ];
+        %tmp.16 = getv function %tmp.15 :encodeBase64;
+        symbol [ _clientId %tmp.18 57 59 68 ];
+        %tmp.18 = getv ? :_clientId;
+        %tmp.19 = ":";
+        %tmp.20 = add %tmp.18 %tmp.19;
+        symbol [ _clientSecret %tmp.22 57 77 90 ];
+        %tmp.22 = getv ? :_clientSecret;
+        %tmp.23 = add %tmp.20 %tmp.22;
+        %tmp.24 = invoke %tmp.15 %tmp.16(%tmp.23);
+        %tmp.25 = add %tmp.14 %tmp.24;
+        lputv %basicAuth.3 %tmp.25;
+        symbol [ basicAuth %basicAuth.3 57 12 21 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 59 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_47_67_69_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_47_67_69_4_stop" ]
+        %options.4 = local;
+        symbol [ options %options.4 59 12 19 ];
+        %tmp.26 = newd 3;
+        %tmp.28 = const :method;
+        symbol [ method %tmp.28 60 13 19 const ];
+        symbol [ Communications %tmp.29 60 23 37 ];
+        %tmp.29 = getm $.Toybox.Communications;
+        symbol [ HTTP_REQUEST_METHOD_POST %tmp.30 60 38 62 ];
+        %tmp.30 = getv %tmp.29 :HTTP_REQUEST_METHOD_POST;
+        %tmp.31 = dup %tmp.26;
+        %tmp.32 = aputv %tmp.31 %tmp.28 %tmp.30;
+        %tmp.34 = const :headers;
+        symbol [ headers %tmp.34 61 13 20 const ];
+        %tmp.35 = newd 2;
+        %tmp.36 = "Authorization";
+        %tmp.37 = lgetv %basicAuth.3;
+        symbol [ basicAuth %tmp.37 62 35 44 ];
+        %tmp.38 = dup %tmp.35;
+        %tmp.39 = aputv %tmp.38 %tmp.36 %tmp.37;
+        %tmp.40 = "Content-Type";
+        symbol [ Communications %tmp.41 63 34 48 ];
+        %tmp.41 = getm $.Toybox.Communications;
+        symbol [ REQUEST_CONTENT_TYPE_URL_ENCODED %tmp.42 63 49 81 ];
+        %tmp.42 = getv %tmp.41 :REQUEST_CONTENT_TYPE_URL_ENCODED;
+        %tmp.43 = dup %tmp.39;
+        %tmp.44 = aputv %tmp.43 %tmp.40 %tmp.42;
+        %tmp.45 = dup %tmp.32;
+        %tmp.46 = aputv %tmp.45 %tmp.34 %tmp.44;
+        %tmp.48 = const :responseType;
+        symbol [ responseType %tmp.48 65 13 25 const ];
+        symbol [ Communications %tmp.49 65 29 43 ];
+        %tmp.49 = getm $.Toybox.Communications;
+        symbol [ HTTP_RESPONSE_CONTENT_TYPE_JSON %tmp.50 65 44 75 ];
+        %tmp.50 = getv %tmp.49 :HTTP_RESPONSE_CONTENT_TYPE_JSON;
+        %tmp.51 = dup %tmp.46;
+        %tmp.52 = aputv %tmp.51 %tmp.48 %tmp.50;
+        lputv %options.4 %tmp.52;
+        symbol [ options %options.4 59 12 19 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 68 8 ]
+        symbol [ Communications %tmp.53 68 8 22 ];
+        %tmp.53 = getm $.Toybox.Communications;
+        symbol [ makeWebRequest %tmp.54 68 23 37 ];
+        %tmp.54 = getv function %tmp.53 :makeWebRequest;
+        %tmp.55 = lgetv %url.1;
+        symbol [ url %tmp.55 68 38 41 ];
+        %tmp.56 = lgetv %params.2;
+        symbol [ params %tmp.56 68 43 49 ];
+        %tmp.57 = lgetv %options.4;
+        symbol [ options %tmp.57 68 51 58 ];
+        %tmp.58 = self;
+        symbol [ method %tmp.59 68 60 66 ];
+        %tmp.59 = getv function %tmp.58 :method;
+        %tmp.61 = const :onTokenResponse;
+        symbol [ onTokenResponse %tmp.61 68 68 83 const ];
+        %tmp.62 = invoke %tmp.58 %tmp.59(%tmp.61);
+        invoke %tmp.53 %tmp.54(%tmp.55, %tmp.56, %tmp.57, %tmp.62);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_47_67_69_4_stop:
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 71; @symbol_functiondef = [authorize,71,13,22]; ]
+    function authorize() as Void {
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_71_33_90_4_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 72 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_71_33_90_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_71_33_90_4_stop" ]
+        %params.1 = local;
+        symbol [ params %params.1 72 12 18 ];
+        %tmp.1 = newd 4;
+        %tmp.2 = "scope";
+        %tmp.3 = "basic.clip";
+        %tmp.4 = dup %tmp.1;
+        %tmp.5 = aputv %tmp.4 %tmp.2 %tmp.3;
+        %tmp.6 = "response_type";
+        %tmp.7 = "code";
+        %tmp.8 = dup %tmp.5;
+        %tmp.9 = aputv %tmp.8 %tmp.6 %tmp.7;
+        %tmp.10 = "client_id";
+        symbol [ _clientId %tmp.12 75 27 36 ];
+        %tmp.12 = getv ? :_clientId;
+        %tmp.13 = dup %tmp.9;
+        %tmp.14 = aputv %tmp.13 %tmp.10 %tmp.12;
+        %tmp.15 = "state";
+        %tmp.16 = "garmin-hue";
+        %tmp.17 = dup %tmp.14;
+        %tmp.18 = aputv %tmp.17 %tmp.15 %tmp.16;
+        lputv %params.1 %tmp.18;
+        symbol [ params %params.1 72 12 18 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 83 8 ]
+        symbol [ Authentication %tmp.19 83 8 22 ];
+        %tmp.19 = getm $.Toybox.Authentication;
+        symbol [ makeOAuthRequest %tmp.20 83 23 39 ];
+        %tmp.20 = getv function %tmp.19 :makeOAuthRequest;
+        %tmp.21 = "https://api.meethue.com/v2/oauth2/authorize";
+        %tmp.22 = lgetv %params.1;
+        symbol [ params %tmp.22 85 12 18 ];
+        symbol [ _redirectUrl %tmp.24 86 12 24 ];
+        %tmp.24 = getv ? :_redirectUrl;
+        symbol [ Authentication %tmp.25 87 12 26 ];
+        %tmp.25 = getm $.Toybox.Authentication;
+        symbol [ OAUTH_RESULT_TYPE_URL %tmp.26 87 27 48 ];
+        %tmp.26 = getv %tmp.25 :OAUTH_RESULT_TYPE_URL;
+        %tmp.27 = newd 1;
+        %tmp.28 = "code";
+        %tmp.29 = "code";
+        %tmp.30 = dup %tmp.27;
+        %tmp.31 = aputv %tmp.30 %tmp.28 %tmp.29;
+        invoke %tmp.19 %tmp.20(%tmp.21, %tmp.22, %tmp.24, %tmp.26, %tmp.31);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_71_33_90_4_stop:
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 92; @symbol_functiondef = [hasTokens,92,13,22]; @symbol_return<0> = [Lang,92,28,32]; @symbol_return<1> = [Boolean,92,33,40]; ]
+    function hasTokens() as Lang.Boolean {
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_92_41_96_4_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 93 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_92_41_96_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_92_41_96_4_stop" ]
+        %accessToken.1 = local;
+        symbol [ accessToken %accessToken.1 93 12 23 ];
+        symbol [ Application %tmp.1 93 26 37 ];
+        %tmp.1 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.2 93 38 45 ];
+        %tmp.2 = getv %tmp.1 :Storage;
+        symbol [ getValue %tmp.3 93 46 54 ];
+        %tmp.3 = getv function %tmp.2 :getValue;
+        %tmp.4 = "accessToken";
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        lputv %accessToken.1 %tmp.5;
+        symbol [ accessToken %accessToken.1 93 12 23 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 94 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_92_41_96_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_92_41_96_4_stop" ]
+        %refreshToken.2 = local;
+        symbol [ refreshToken %refreshToken.2 94 12 24 ];
+        symbol [ Application %tmp.6 94 27 38 ];
+        %tmp.6 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.7 94 39 46 ];
+        %tmp.7 = getv %tmp.6 :Storage;
+        symbol [ getValue %tmp.8 94 47 55 ];
+        %tmp.8 = getv function %tmp.7 :getValue;
+        %tmp.9 = "refreshToken";
+        %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+        lputv %refreshToken.2 %tmp.10;
+        symbol [ refreshToken %refreshToken.2 94 12 24 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 95 8 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_95_15_95_54_begin:
+        %tmp.11 = lgetv %accessToken.1;
+        symbol [ accessToken %tmp.11 95 15 26 ];
+        %tmp.12 = null;
+        %tmp.13 = ne %tmp.11 %tmp.12;
+        %tmp.14 = dup %tmp.13;
+        bf %tmp.14 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_95_38_95_54_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_95_38_95_54_true:
+        %tmp.15 = lgetv %refreshToken.2;
+        symbol [ refreshToken %tmp.15 95 38 50 ];
+        %tmp.16 = null;
+        %tmp.17 = ne %tmp.15 %tmp.16;
+        %tmp.18 = and %tmp.13 %tmp.17;
+        push %tmp.18;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_95_38_95_54_end:
+        %tmp.19 = phi [%tmp.14 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_95_15_95_54_begin] [%tmp.18 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_95_38_95_54_true] [%tmp.19 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_95_38_95_54_end];
+        ret %tmp.19;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_92_41_96_4_stop:
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 98; @symbol_functiondef = [onTokenResponse,98,20,35]; @symbol_param<0> = [responseCode,98,36,48]; @symbol_param<0>_type<0> = [Lang,98,52,56]; @symbol_param<0>_type<1> = [Number,98,57,63]; @symbol_param<1> = [data,98,65,69]; @symbol_param<1>_type<0> = [Lang,98,81,85]; @symbol_param<1>_type<1> = [Dictionary,98,86,96]; @symbol_param<1>_type<2> = [Lang,98,100,104]; @symbol_param<1>_type<3> = [String,98,105,111]; ]
+    public
+    function onTokenResponse(responseCode as Lang.Number, data as Null or Lang.Dictionary or Lang.String) as Void {
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_98_121_130_4_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 99 8 ]
+        symbol [ System %tmp.1 99 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 99 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "onTokenResponse triggered. Code: ";
+        %tmp.4 = lgetv %responseCode;
+        symbol [ responseCode %tmp.4 99 61 73 ];
+        %tmp.5 = add %tmp.3 %tmp.4;
+        invoke %tmp.1 %tmp.2(%tmp.5);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 100 8 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_8_129_8_if_stmt:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_12_100_56_begin:
+        %tmp.6 = lgetv %responseCode;
+        symbol [ responseCode %tmp.6 100 12 24 ];
+        %tmp.7 = 200;
+        %tmp.8 = eq %tmp.6 %tmp.7;
+        bf %tmp.8 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_8_129_8_if_else_false;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_35_100_56_true:
+        %tmp.9 = lgetv %data;
+        symbol [ data %tmp.9 100 35 39 ];
+        symbol [ Lang %tmp.10 100 51 55 ];
+        %tmp.10 = getm $.Toybox.Lang;
+        symbol [ Dictionary %tmp.11 100 56 66 ];
+        %tmp.11 = getv %tmp.10 :Dictionary;
+        %tmp.12 = isa %tmp.9 %tmp.11;
+        push %tmp.12;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_35_100_56_end:
+        %tmp.13 = phi [%tmp.8 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_12_100_56_begin] [%tmp.12 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_35_100_56_true] [%tmp.13 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_35_100_56_end];
+        bf %tmp.13 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_8_129_8_if_else_false;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_8_129_8_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_68_123_8_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 101 12 ]
+        symbol [ System %tmp.14 101 12 18 ];
+        %tmp.14 = getm $.Toybox.System;
+        symbol [ println %tmp.15 101 19 26 ];
+        %tmp.15 = getv function %tmp.14 :println;
+        %tmp.16 = "Token exchange successful.";
+        invoke %tmp.14 %tmp.15(%tmp.16);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 102 12 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_68_123_8_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_68_123_8_stop" ]
+        %tokenData.1 = local;
+        symbol [ tokenData %tokenData.1 102 16 25 ];
+        %tmp.17 = lgetv %data;
+        symbol [ data %tmp.17 102 28 32 ];
+        %tmp.18 = as %tmp.17 { (Lang.Dictionary) };
+        %tmp.19 = as %tmp.18 Lang.Dictionary;
+        symbol [ Lang %tmp.19 102 36 40 ];
+        symbol [ Dictionary %tmp.19 102 41 51 ];
+        lputv %tokenData.1 %tmp.19;
+        symbol [ tokenData %tokenData.1 102 16 25 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 103 12 ]
+        %tmp.20 = lgetv %tokenData.1;
+        symbol [ tokenData %tmp.20 103 21 30 ];
+        %tmp.21 = "access_token";
+        %tmp.22 = agetv %tmp.20 %tmp.21;
+        %tmp.23 = as %tmp.22 Lang.String;
+        symbol [ Lang %tmp.23 103 50 54 ];
+        symbol [ String %tmp.23 103 55 61 ];
+        symbol [ _token ? 103 12 18 ];
+        putv self :_token %tmp.23;
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 104 12 ]
+        %tmp.24 = lgetv %tokenData.1;
+        symbol [ tokenData %tmp.24 104 28 37 ];
+        %tmp.25 = "refresh_token";
+        %tmp.26 = agetv %tmp.24 %tmp.25;
+        %tmp.27 = as %tmp.26 Lang.String;
+        symbol [ Lang %tmp.27 104 58 62 ];
+        symbol [ String %tmp.27 104 63 69 ];
+        symbol [ _refreshToken ? 104 12 25 ];
+        putv self :_refreshToken %tmp.27;
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 105 12 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_68_123_8_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_68_123_8_stop" ]
+        %expiresIn.2 = local;
+        symbol [ expiresIn %expiresIn.2 105 16 25 ];
+        %tmp.28 = lgetv %tokenData.1;
+        symbol [ tokenData %tmp.28 105 28 37 ];
+        %tmp.29 = "expires_in";
+        %tmp.30 = agetv %tmp.28 %tmp.29;
+        %tmp.31 = as %tmp.30 Lang.Number;
+        symbol [ Lang %tmp.31 105 55 59 ];
+        symbol [ Number %tmp.31 105 60 66 ];
+        lputv %expiresIn.2 %tmp.31;
+        symbol [ expiresIn %expiresIn.2 105 16 25 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 107 12 ]
+        symbol [ Application %tmp.32 107 12 23 ];
+        %tmp.32 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.33 107 24 31 ];
+        %tmp.33 = getv %tmp.32 :Storage;
+        symbol [ setValue %tmp.34 107 32 40 ];
+        %tmp.34 = getv function %tmp.33 :setValue;
+        %tmp.35 = "accessToken";
+        symbol [ _token %tmp.37 107 56 62 ];
+        %tmp.37 = getv ? :_token;
+        invoke %tmp.33 %tmp.34(%tmp.35, %tmp.37);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 108 12 ]
+        symbol [ Application %tmp.38 108 12 23 ];
+        %tmp.38 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.39 108 24 31 ];
+        %tmp.39 = getv %tmp.38 :Storage;
+        symbol [ setValue %tmp.40 108 32 40 ];
+        %tmp.40 = getv function %tmp.39 :setValue;
+        %tmp.41 = "refreshToken";
+        symbol [ _refreshToken %tmp.43 108 57 70 ];
+        %tmp.43 = getv ? :_refreshToken;
+        invoke %tmp.39 %tmp.40(%tmp.41, %tmp.43);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 109 12 ]
+        symbol [ System %tmp.44 109 28 34 ];
+        %tmp.44 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.45 109 35 47 ];
+        %tmp.45 = getv function %tmp.44 :getClockTime;
+        %tmp.46 = invoke %tmp.44 %tmp.45();
+        symbol [ sec %tmp.47 109 50 53 ];
+        %tmp.47 = getv %tmp.46 :sec;
+        %tmp.48 = lgetv %expiresIn.2;
+        symbol [ expiresIn %tmp.48 109 56 65 ];
+        %tmp.49 = add %tmp.47 %tmp.48;
+        symbol [ _tokenExpires ? 109 12 25 ];
+        putv self :_tokenExpires %tmp.49;
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 110 12 ]
+        symbol [ Application %tmp.50 110 12 23 ];
+        %tmp.50 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.51 110 24 31 ];
+        %tmp.51 = getv %tmp.50 :Storage;
+        symbol [ setValue %tmp.52 110 32 40 ];
+        %tmp.52 = getv function %tmp.51 :setValue;
+        %tmp.53 = "tokenExpires";
+        symbol [ _tokenExpires %tmp.55 110 57 70 ];
+        %tmp.55 = getv ? :_tokenExpires;
+        invoke %tmp.51 %tmp.52(%tmp.53, %tmp.55);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 112 12 ]
+        symbol [ System %tmp.56 112 12 18 ];
+        %tmp.56 = getm $.Toybox.System;
+        symbol [ println %tmp.57 112 19 26 ];
+        %tmp.57 = getv function %tmp.56 :println;
+        %tmp.58 = "Access token stored. Checking for app key...";
+        invoke %tmp.56 %tmp.57(%tmp.58);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 113 12 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_68_123_8_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_68_123_8_stop" ]
+        %appKey.3 = local;
+        symbol [ appKey %appKey.3 113 16 22 ];
+        symbol [ Application %tmp.59 113 25 36 ];
+        %tmp.59 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.60 113 37 44 ];
+        %tmp.60 = getv %tmp.59 :Storage;
+        symbol [ getValue %tmp.61 113 45 53 ];
+        %tmp.61 = getv function %tmp.60 :getValue;
+        %tmp.62 = "hueApplicationKey";
+        %tmp.63 = invoke %tmp.60 %tmp.61(%tmp.62);
+        lputv %appKey.3 %tmp.63;
+        symbol [ appKey %appKey.3 113 16 22 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 114 12 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_114_12_122_12_if_stmt:
+        %tmp.64 = lgetv %appKey.3;
+        symbol [ appKey %tmp.64 114 16 22 ];
+        %tmp.65 = null;
+        %tmp.66 = eq %tmp.64 %tmp.65;
+        bf %tmp.66 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_114_12_122_12_if_else_false;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_114_12_122_12_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_114_32_117_12_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 115 16 ]
+        symbol [ System %tmp.67 115 16 22 ];
+        %tmp.67 = getm $.Toybox.System;
+        symbol [ println %tmp.68 115 23 30 ];
+        %tmp.68 = getv function %tmp.67 :println;
+        %tmp.69 = "No app key found, starting registration process.";
+        invoke %tmp.67 %tmp.68(%tmp.69);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 116 16 ]
+        %tmp.70 = self;
+        symbol [ startRegistration %tmp.71 116 16 33 ];
+        %tmp.71 = getv function %tmp.70 :startRegistration;
+        invoke %tmp.70 %tmp.71();
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_114_32_117_12_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_114_12_122_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_114_12_122_12_if_else_false:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_117_19_122_12_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 118 16 ]
+        symbol [ System %tmp.72 118 16 22 ];
+        %tmp.72 = getm $.Toybox.System;
+        symbol [ println %tmp.73 118 23 30 ];
+        %tmp.73 = getv function %tmp.72 :println;
+        %tmp.74 = "App key found, proceeding to fetch data.";
+        invoke %tmp.72 %tmp.73(%tmp.74);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 119 16 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_119_16_121_16_if_stmt:
+        symbol [ _view %tmp.76 119 20 25 ];
+        %tmp.76 = getv ? :_view;
+        %tmp.77 = null;
+        %tmp.78 = ne %tmp.76 %tmp.77;
+        bf %tmp.78 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_119_16_121_16_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_119_16_121_16_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_119_35_121_16_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 120 20 ]
+        symbol [ _view %tmp.80 120 20 25 ];
+        %tmp.80 = getv ? :_view;
+        %tmp.81 = as %tmp.80 { (!Null) };
+        symbol [ setState %tmp.82 120 26 34 ];
+        %tmp.82 = getv function %tmp.81 :setState;
+        symbol [ _view %tmp.84 120 36 41 ];
+        %tmp.84 = getv ? :_view;
+        %tmp.85 = as %tmp.84 { (!Null) };
+        %tmp.86 = as %tmp.85 GarminHueHeartbeatAppView;
+        symbol [ GarminHueHeartbeatAppView %tmp.86 120 45 70 ];
+        symbol [ STATE_FETCHING_DATA %tmp.87 120 72 91 ];
+        %tmp.87 = getv %tmp.86 :STATE_FETCHING_DATA;
+        invoke %tmp.81 %tmp.82(%tmp.87);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_119_35_121_16_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_119_16_121_16_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_119_16_121_16_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_117_19_122_12_stop:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_114_12_122_12_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_68_123_8_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_8_129_8_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_8_129_8_if_else_false:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_123_15_129_8_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 124 12 ]
+        symbol [ System %tmp.88 124 12 18 ];
+        %tmp.88 = getm $.Toybox.System;
+        symbol [ println %tmp.89 124 19 26 ];
+        %tmp.89 = getv function %tmp.88 :println;
+        %tmp.90 = "Token exchange failed with code: ";
+        %tmp.91 = lgetv %responseCode;
+        symbol [ responseCode %tmp.91 124 65 77 ];
+        %tmp.92 = add %tmp.90 %tmp.91;
+        invoke %tmp.88 %tmp.89(%tmp.92);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 125 12 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_125_12_128_12_if_stmt:
+        symbol [ _view %tmp.94 125 16 21 ];
+        %tmp.94 = getv ? :_view;
+        %tmp.95 = null;
+        %tmp.96 = ne %tmp.94 %tmp.95;
+        bf %tmp.96 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_125_12_128_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_125_12_128_12_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_125_31_128_12_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 126 16 ]
+        symbol [ _view %tmp.98 126 16 21 ];
+        %tmp.98 = getv ? :_view;
+        %tmp.99 = as %tmp.98 { (!Null) };
+        symbol [ setMessage %tmp.100 126 22 32 ];
+        %tmp.100 = getv function %tmp.99 :setMessage;
+        %tmp.101 = "Login Failed\nCode: ";
+        %tmp.102 = lgetv %responseCode;
+        symbol [ responseCode %tmp.102 126 58 70 ];
+        %tmp.103 = add %tmp.101 %tmp.102;
+        invoke %tmp.99 %tmp.100(%tmp.103);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 127 16 ]
+        symbol [ _view %tmp.105 127 16 21 ];
+        %tmp.105 = getv ? :_view;
+        symbol [ setState %tmp.106 127 22 30 ];
+        %tmp.106 = getv function %tmp.105 :setState;
+        symbol [ _view %tmp.108 127 32 37 ];
+        %tmp.108 = getv ? :_view;
+        %tmp.109 = as %tmp.108 GarminHueHeartbeatAppView;
+        symbol [ GarminHueHeartbeatAppView %tmp.109 127 41 66 ];
+        symbol [ STATE_ERROR %tmp.110 127 68 79 ];
+        %tmp.110 = getv %tmp.109 :STATE_ERROR;
+        invoke %tmp.105 %tmp.106(%tmp.110);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_125_31_128_12_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_125_12_128_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_125_12_128_12_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_123_15_129_8_stop:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_100_8_129_8_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_98_121_130_4_stop:
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 132; @symbol_functiondef = [startRegistration,132,13,30]; ]
+    function startRegistration() as Void {
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_132_41_135_4_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 133 8 ]
+        symbol [ System %tmp.1 133 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 133 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "Controller: startRegistration called.";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 134 8 ]
+        %tmp.4 = self;
+        symbol [ enableLinkButton %tmp.5 134 8 24 ];
+        %tmp.5 = getv function %tmp.4 :enableLinkButton;
+        invoke %tmp.4 %tmp.5();
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_132_41_135_4_stop:
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 137; @symbol_functiondef = [enableLinkButton,137,13,29]; ]
+    function enableLinkButton() as Void {
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_137_40_154_4_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 138 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_137_40_154_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_137_40_154_4_stop" ]
+        %accessToken.1 = local;
+        symbol [ accessToken %accessToken.1 138 12 23 ];
+        symbol [ Application %tmp.1 138 26 37 ];
+        %tmp.1 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.2 138 38 45 ];
+        %tmp.2 = getv %tmp.1 :Storage;
+        symbol [ getValue %tmp.3 138 46 54 ];
+        %tmp.3 = getv function %tmp.2 :getValue;
+        %tmp.4 = "accessToken";
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        lputv %accessToken.1 %tmp.5;
+        symbol [ accessToken %accessToken.1 138 12 23 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 139 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_137_40_154_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_137_40_154_4_stop" ]
+        %url.2 = local;
+        symbol [ url %url.2 139 12 15 ];
+        %tmp.6 = "https://api.meethue.com/route/api/0/config";
+        lputv %url.2 %tmp.6;
+        symbol [ url %url.2 139 12 15 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 140 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_137_40_154_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_137_40_154_4_stop" ]
+        %params.3 = local;
+        symbol [ params %params.3 140 12 18 ];
+        %tmp.7 = newd 1;
+        %tmp.8 = "linkbutton";
+        %tmp.9 = true;
+        %tmp.10 = dup %tmp.7;
+        %tmp.11 = aputv %tmp.10 %tmp.8 %tmp.9;
+        lputv %params.3 %tmp.11;
+        symbol [ params %params.3 140 12 18 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 143 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_137_40_154_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_137_40_154_4_stop" ]
+        %options.4 = local;
+        symbol [ options %options.4 143 12 19 ];
+        %tmp.12 = newd 3;
+        %tmp.14 = const :method;
+        symbol [ method %tmp.14 144 13 19 const ];
+        symbol [ Communications %tmp.15 144 23 37 ];
+        %tmp.15 = getm $.Toybox.Communications;
+        symbol [ HTTP_REQUEST_METHOD_PUT %tmp.16 144 38 61 ];
+        %tmp.16 = getv %tmp.15 :HTTP_REQUEST_METHOD_PUT;
+        %tmp.17 = dup %tmp.12;
+        %tmp.18 = aputv %tmp.17 %tmp.14 %tmp.16;
+        %tmp.20 = const :headers;
+        symbol [ headers %tmp.20 145 13 20 const ];
+        %tmp.21 = newd 2;
+        %tmp.22 = "Authorization";
+        %tmp.23 = "Bearer ";
+        %tmp.24 = lgetv %accessToken.1;
+        symbol [ accessToken %tmp.24 146 47 58 ];
+        %tmp.25 = add %tmp.23 %tmp.24;
+        %tmp.26 = dup %tmp.21;
+        %tmp.27 = aputv %tmp.26 %tmp.22 %tmp.25;
+        %tmp.28 = "Content-Type";
+        symbol [ Communications %tmp.29 147 34 48 ];
+        %tmp.29 = getm $.Toybox.Communications;
+        symbol [ REQUEST_CONTENT_TYPE_JSON %tmp.30 147 49 74 ];
+        %tmp.30 = getv %tmp.29 :REQUEST_CONTENT_TYPE_JSON;
+        %tmp.31 = dup %tmp.27;
+        %tmp.32 = aputv %tmp.31 %tmp.28 %tmp.30;
+        %tmp.33 = dup %tmp.18;
+        %tmp.34 = aputv %tmp.33 %tmp.20 %tmp.32;
+        %tmp.36 = const :responseType;
+        symbol [ responseType %tmp.36 149 13 25 const ];
+        symbol [ Communications %tmp.37 149 29 43 ];
+        %tmp.37 = getm $.Toybox.Communications;
+        symbol [ HTTP_RESPONSE_CONTENT_TYPE_JSON %tmp.38 149 44 75 ];
+        %tmp.38 = getv %tmp.37 :HTTP_RESPONSE_CONTENT_TYPE_JSON;
+        %tmp.39 = dup %tmp.34;
+        %tmp.40 = aputv %tmp.39 %tmp.36 %tmp.38;
+        lputv %options.4 %tmp.40;
+        symbol [ options %options.4 143 12 19 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 152 8 ]
+        symbol [ System %tmp.41 152 8 14 ];
+        %tmp.41 = getm $.Toybox.System;
+        symbol [ println %tmp.42 152 15 22 ];
+        %tmp.42 = getv function %tmp.41 :println;
+        %tmp.43 = "Making enable link button request to: ";
+        %tmp.44 = lgetv %url.2;
+        symbol [ url %tmp.44 152 66 69 ];
+        %tmp.45 = add %tmp.43 %tmp.44;
+        invoke %tmp.41 %tmp.42(%tmp.45);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 153 8 ]
+        symbol [ Communications %tmp.46 153 8 22 ];
+        %tmp.46 = getm $.Toybox.Communications;
+        symbol [ makeWebRequest %tmp.47 153 23 37 ];
+        %tmp.47 = getv function %tmp.46 :makeWebRequest;
+        %tmp.48 = lgetv %url.2;
+        symbol [ url %tmp.48 153 38 41 ];
+        %tmp.49 = lgetv %params.3;
+        symbol [ params %tmp.49 153 43 49 ];
+        %tmp.50 = lgetv %options.4;
+        symbol [ options %tmp.50 153 51 58 ];
+        %tmp.51 = self;
+        symbol [ method %tmp.52 153 60 66 ];
+        %tmp.52 = getv function %tmp.51 :method;
+        %tmp.54 = const :onEnableLinkButtonResponse;
+        symbol [ onEnableLinkButtonResponse %tmp.54 153 68 94 const ];
+        %tmp.55 = invoke %tmp.51 %tmp.52(%tmp.54);
+        invoke %tmp.46 %tmp.47(%tmp.48, %tmp.49, %tmp.50, %tmp.55);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_137_40_154_4_stop:
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 156; @symbol_functiondef = [onEnableLinkButtonResponse,156,13,39]; @symbol_param<0> = [responseCode,156,40,52]; @symbol_param<0>_type<0> = [Lang,156,56,60]; @symbol_param<0>_type<1> = [Number,156,61,67]; @symbol_param<1> = [data,156,69,73]; @symbol_param<1>_type<0> = [Lang,156,85,89]; @symbol_param<1>_type<1> = [Dictionary,156,90,100]; @symbol_param<1>_type<2> = [Lang,156,104,108]; @symbol_param<1>_type<3> = [String,156,109,115]; @symbol_param<1>_type<4> = [PersistedContent,156,119,135]; @symbol_param<1>_type<5> = [Iterator,156,136,144]; ]
+    function onEnableLinkButtonResponse(responseCode as Lang.Number, data as Null or Lang.Dictionary or Lang.String or PersistedContent.Iterator) as Void {
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_156_154_168_4_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 157 8 ]
+        symbol [ System %tmp.1 157 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 157 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "onEnableLinkButtonResponse triggered. Code: ";
+        %tmp.4 = lgetv %responseCode;
+        symbol [ responseCode %tmp.4 157 72 84 ];
+        %tmp.5 = add %tmp.3 %tmp.4;
+        invoke %tmp.1 %tmp.2(%tmp.5);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 158 8 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_158_8_167_8_if_stmt:
+        %tmp.6 = lgetv %responseCode;
+        symbol [ responseCode %tmp.6 158 12 24 ];
+        %tmp.7 = 200;
+        %tmp.8 = eq %tmp.6 %tmp.7;
+        bf %tmp.8 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_158_8_167_8_if_else_false;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_158_8_167_8_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_158_33_161_8_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 159 12 ]
+        symbol [ System %tmp.9 159 12 18 ];
+        %tmp.9 = getm $.Toybox.System;
+        symbol [ println %tmp.10 159 19 26 ];
+        %tmp.10 = getv function %tmp.9 :println;
+        %tmp.11 = "Enable link button successful. Now registering application.";
+        invoke %tmp.9 %tmp.10(%tmp.11);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 160 12 ]
+        %tmp.12 = self;
+        symbol [ registerApplication %tmp.13 160 12 31 ];
+        %tmp.13 = getv function %tmp.12 :registerApplication;
+        invoke %tmp.12 %tmp.13();
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_158_33_161_8_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_158_8_167_8_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_158_8_167_8_if_else_false:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_161_15_167_8_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 162 12 ]
+        symbol [ System %tmp.14 162 12 18 ];
+        %tmp.14 = getm $.Toybox.System;
+        symbol [ println %tmp.15 162 19 26 ];
+        %tmp.15 = getv function %tmp.14 :println;
+        %tmp.16 = "Enable link button failed with code: ";
+        %tmp.17 = lgetv %responseCode;
+        symbol [ responseCode %tmp.17 162 69 81 ];
+        %tmp.18 = add %tmp.16 %tmp.17;
+        invoke %tmp.14 %tmp.15(%tmp.18);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 163 12 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_163_12_166_12_if_stmt:
+        symbol [ _view %tmp.20 163 16 21 ];
+        %tmp.20 = getv ? :_view;
+        %tmp.21 = null;
+        %tmp.22 = ne %tmp.20 %tmp.21;
+        bf %tmp.22 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_163_12_166_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_163_12_166_12_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_163_31_166_12_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 164 16 ]
+        symbol [ _view %tmp.24 164 16 21 ];
+        %tmp.24 = getv ? :_view;
+        %tmp.25 = as %tmp.24 { (!Null) };
+        symbol [ setMessage %tmp.26 164 22 32 ];
+        %tmp.26 = getv function %tmp.25 :setMessage;
+        %tmp.27 = "Link Fail\nCode: ";
+        %tmp.28 = lgetv %responseCode;
+        symbol [ responseCode %tmp.28 164 55 67 ];
+        %tmp.29 = add %tmp.27 %tmp.28;
+        invoke %tmp.25 %tmp.26(%tmp.29);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 165 16 ]
+        symbol [ _view %tmp.31 165 16 21 ];
+        %tmp.31 = getv ? :_view;
+        symbol [ setState %tmp.32 165 22 30 ];
+        %tmp.32 = getv function %tmp.31 :setState;
+        symbol [ _view %tmp.34 165 32 37 ];
+        %tmp.34 = getv ? :_view;
+        %tmp.35 = as %tmp.34 GarminHueHeartbeatAppView;
+        symbol [ GarminHueHeartbeatAppView %tmp.35 165 41 66 ];
+        symbol [ STATE_ERROR %tmp.36 165 68 79 ];
+        %tmp.36 = getv %tmp.35 :STATE_ERROR;
+        invoke %tmp.31 %tmp.32(%tmp.36);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_163_31_166_12_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_163_12_166_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_163_12_166_12_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_161_15_167_8_stop:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_158_8_167_8_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_156_154_168_4_stop:
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 170; @symbol_functiondef = [registerApplication,170,13,32]; ]
+    function registerApplication() as Void {
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_170_43_187_4_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 171 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_170_43_187_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_170_43_187_4_stop" ]
+        %accessToken.1 = local;
+        symbol [ accessToken %accessToken.1 171 12 23 ];
+        symbol [ Application %tmp.1 171 26 37 ];
+        %tmp.1 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.2 171 38 45 ];
+        %tmp.2 = getv %tmp.1 :Storage;
+        symbol [ getValue %tmp.3 171 46 54 ];
+        %tmp.3 = getv function %tmp.2 :getValue;
+        %tmp.4 = "accessToken";
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        lputv %accessToken.1 %tmp.5;
+        symbol [ accessToken %accessToken.1 171 12 23 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 172 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_170_43_187_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_170_43_187_4_stop" ]
+        %url.2 = local;
+        symbol [ url %url.2 172 12 15 ];
+        %tmp.6 = "https://api.meethue.com/route/api";
+        lputv %url.2 %tmp.6;
+        symbol [ url %url.2 172 12 15 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 173 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_170_43_187_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_170_43_187_4_stop" ]
+        %params.3 = local;
+        symbol [ params %params.3 173 12 18 ];
+        %tmp.7 = newd 1;
+        %tmp.8 = "devicetype";
+        %tmp.9 = "garmin_hue_app#fenix";
+        %tmp.10 = dup %tmp.7;
+        %tmp.11 = aputv %tmp.10 %tmp.8 %tmp.9;
+        lputv %params.3 %tmp.11;
+        symbol [ params %params.3 173 12 18 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 176 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_170_43_187_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_170_43_187_4_stop" ]
+        %options.4 = local;
+        symbol [ options %options.4 176 12 19 ];
+        %tmp.12 = newd 3;
+        %tmp.14 = const :method;
+        symbol [ method %tmp.14 177 13 19 const ];
+        symbol [ Communications %tmp.15 177 23 37 ];
+        %tmp.15 = getm $.Toybox.Communications;
+        symbol [ HTTP_REQUEST_METHOD_POST %tmp.16 177 38 62 ];
+        %tmp.16 = getv %tmp.15 :HTTP_REQUEST_METHOD_POST;
+        %tmp.17 = dup %tmp.12;
+        %tmp.18 = aputv %tmp.17 %tmp.14 %tmp.16;
+        %tmp.20 = const :headers;
+        symbol [ headers %tmp.20 178 13 20 const ];
+        %tmp.21 = newd 2;
+        %tmp.22 = "Authorization";
+        %tmp.23 = "Bearer ";
+        %tmp.24 = lgetv %accessToken.1;
+        symbol [ accessToken %tmp.24 179 47 58 ];
+        %tmp.25 = add %tmp.23 %tmp.24;
+        %tmp.26 = dup %tmp.21;
+        %tmp.27 = aputv %tmp.26 %tmp.22 %tmp.25;
+        %tmp.28 = "Content-Type";
+        symbol [ Communications %tmp.29 180 34 48 ];
+        %tmp.29 = getm $.Toybox.Communications;
+        symbol [ REQUEST_CONTENT_TYPE_JSON %tmp.30 180 49 74 ];
+        %tmp.30 = getv %tmp.29 :REQUEST_CONTENT_TYPE_JSON;
+        %tmp.31 = dup %tmp.27;
+        %tmp.32 = aputv %tmp.31 %tmp.28 %tmp.30;
+        %tmp.33 = dup %tmp.18;
+        %tmp.34 = aputv %tmp.33 %tmp.20 %tmp.32;
+        %tmp.36 = const :responseType;
+        symbol [ responseType %tmp.36 182 13 25 const ];
+        symbol [ Communications %tmp.37 182 29 43 ];
+        %tmp.37 = getm $.Toybox.Communications;
+        symbol [ HTTP_RESPONSE_CONTENT_TYPE_JSON %tmp.38 182 44 75 ];
+        %tmp.38 = getv %tmp.37 :HTTP_RESPONSE_CONTENT_TYPE_JSON;
+        %tmp.39 = dup %tmp.34;
+        %tmp.40 = aputv %tmp.39 %tmp.36 %tmp.38;
+        lputv %options.4 %tmp.40;
+        symbol [ options %options.4 176 12 19 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 185 8 ]
+        symbol [ System %tmp.41 185 8 14 ];
+        %tmp.41 = getm $.Toybox.System;
+        symbol [ println %tmp.42 185 15 22 ];
+        %tmp.42 = getv function %tmp.41 :println;
+        %tmp.43 = "Making app registration request to: ";
+        %tmp.44 = lgetv %url.2;
+        symbol [ url %tmp.44 185 64 67 ];
+        %tmp.45 = add %tmp.43 %tmp.44;
+        invoke %tmp.41 %tmp.42(%tmp.45);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 186 8 ]
+        symbol [ Communications %tmp.46 186 8 22 ];
+        %tmp.46 = getm $.Toybox.Communications;
+        symbol [ makeWebRequest %tmp.47 186 23 37 ];
+        %tmp.47 = getv function %tmp.46 :makeWebRequest;
+        %tmp.48 = lgetv %url.2;
+        symbol [ url %tmp.48 186 38 41 ];
+        %tmp.49 = lgetv %params.3;
+        symbol [ params %tmp.49 186 43 49 ];
+        %tmp.50 = lgetv %options.4;
+        symbol [ options %tmp.50 186 51 58 ];
+        %tmp.51 = self;
+        symbol [ method %tmp.52 186 60 66 ];
+        %tmp.52 = getv function %tmp.51 :method;
+        %tmp.54 = const :onRegisterApplicationResponse;
+        symbol [ onRegisterApplicationResponse %tmp.54 186 68 97 const ];
+        %tmp.55 = invoke %tmp.51 %tmp.52(%tmp.54);
+        invoke %tmp.46 %tmp.47(%tmp.48, %tmp.49, %tmp.50, %tmp.55);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_170_43_187_4_stop:
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 189; @symbol_functiondef = [onRegisterApplicationResponse,189,20,49]; @symbol_param<0> = [responseCode,189,50,62]; @symbol_param<0>_type<0> = [Lang,189,66,70]; @symbol_param<0>_type<1> = [Number,189,71,77]; @symbol_param<1> = [data,189,79,83]; @symbol_param<1>_type<0> = [Lang,189,95,99]; @symbol_param<1>_type<1> = [Dictionary,189,100,110]; @symbol_param<1>_type<2> = [Lang,189,114,118]; @symbol_param<1>_type<3> = [String,189,119,125]; @symbol_param<1>_type<4> = [PersistedContent,189,129,145]; @symbol_param<1>_type<5> = [Iterator,189,146,154]; ]
+    public
+    function onRegisterApplicationResponse(responseCode as Lang.Number, data as Null or Lang.Dictionary or Lang.String or PersistedContent.Iterator) as Void {
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_189_164_225_4_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 190 8 ]
+        symbol [ System %tmp.1 190 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 190 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "onRegisterApplicationResponse triggered. Code: ";
+        %tmp.4 = lgetv %responseCode;
+        symbol [ responseCode %tmp.4 190 75 87 ];
+        %tmp.5 = add %tmp.3 %tmp.4;
+        invoke %tmp.1 %tmp.2(%tmp.5);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 192 8 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_192_8_224_8_if_stmt:
+        %tmp.6 = lgetv %responseCode;
+        symbol [ responseCode %tmp.6 192 12 24 ];
+        %tmp.7 = 200;
+        %tmp.8 = eq %tmp.6 %tmp.7;
+        bf %tmp.8 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_192_8_224_8_if_else_false;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_192_8_224_8_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_192_33_219_8_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 194 12 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_192_33_219_8_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_192_33_219_8_stop" ]
+        %dataArray.1 = local;
+        symbol [ dataArray %dataArray.1 194 16 25 ];
+        %tmp.9 = lgetv %data;
+        symbol [ data %tmp.9 194 28 32 ];
+        %tmp.10 = as %tmp.9 Lang.Array;
+        symbol [ Lang %tmp.10 194 36 40 ];
+        symbol [ Array %tmp.10 194 41 46 ];
+        lputv %dataArray.1 %tmp.10;
+        symbol [ dataArray %dataArray.1 194 16 25 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 195 12 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_12_218_12_if_stmt:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_16_195_56_begin:
+        %tmp.11 = lgetv %dataArray.1;
+        symbol [ dataArray %tmp.11 195 16 25 ];
+        %tmp.12 = null;
+        %tmp.13 = ne %tmp.11 %tmp.12;
+        bf %tmp.13 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_12_218_12_if_else_false;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_37_195_56_true:
+        %tmp.14 = lgetv %dataArray.1;
+        symbol [ dataArray %tmp.14 195 37 46 ];
+        %tmp.15 = as %tmp.14 { (!Null) };
+        symbol [ size %tmp.16 195 47 51 ];
+        %tmp.16 = getv function %tmp.15 :size;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        %tmp.18 = 0;
+        %tmp.19 = gt %tmp.17 %tmp.18;
+        push %tmp.19;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_37_195_56_end:
+        %tmp.20 = phi [%tmp.13 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_16_195_56_begin] [%tmp.19 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_37_195_56_true] [%tmp.20 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_37_195_56_end];
+        bf %tmp.20 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_12_218_12_if_else_false;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_12_218_12_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_59_213_12_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 196 16 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_59_213_12_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_59_213_12_stop" ]
+        %responseDict.2 = local;
+        symbol [ responseDict %responseDict.2 196 20 32 ];
+        %tmp.21 = lgetv %dataArray.1;
+        symbol [ dataArray %tmp.21 196 35 44 ];
+        %tmp.22 = as %tmp.21 { (!Null) };
+        %tmp.23 = 0;
+        %tmp.24 = agetv %tmp.22 %tmp.23;
+        %tmp.25 = as %tmp.24 Lang.Dictionary;
+        symbol [ Lang %tmp.25 196 51 55 ];
+        symbol [ Dictionary %tmp.25 196 56 66 ];
+        lputv %responseDict.2 %tmp.25;
+        symbol [ responseDict %responseDict.2 196 20 32 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 197 16 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_197_16_212_16_if_stmt:
+        %tmp.26 = lgetv %responseDict.2;
+        symbol [ responseDict %tmp.26 197 20 32 ];
+        symbol [ hasKey %tmp.27 197 33 39 ];
+        %tmp.27 = getv function %tmp.26 :hasKey;
+        %tmp.28 = "success";
+        %tmp.29 = invoke %tmp.26 %tmp.27(%tmp.28);
+        bf %tmp.29 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_197_16_212_16_if_false;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_197_16_212_16_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_197_52_205_16_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 198 20 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_197_52_205_16_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_197_52_205_16_stop" ]
+        %successData.3 = local;
+        symbol [ successData %successData.3 198 24 35 ];
+        %tmp.30 = lgetv %responseDict.2;
+        symbol [ responseDict %tmp.30 198 38 50 ];
+        %tmp.31 = "success";
+        %tmp.32 = agetv %tmp.30 %tmp.31;
+        %tmp.33 = as %tmp.32 Lang.Dictionary;
+        symbol [ Lang %tmp.33 198 65 69 ];
+        symbol [ Dictionary %tmp.33 198 70 80 ];
+        lputv %successData.3 %tmp.33;
+        symbol [ successData %successData.3 198 24 35 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 199 20 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_197_52_205_16_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_197_52_205_16_stop" ]
+        %appKey.4 = local;
+        symbol [ appKey %appKey.4 199 24 30 ];
+        %tmp.34 = lgetv %successData.3;
+        symbol [ successData %tmp.34 199 33 44 ];
+        %tmp.35 = "username";
+        %tmp.36 = agetv %tmp.34 %tmp.35;
+        %tmp.37 = as %tmp.36 Lang.String;
+        symbol [ Lang %tmp.37 199 60 64 ];
+        symbol [ String %tmp.37 199 65 71 ];
+        lputv %appKey.4 %tmp.37;
+        symbol [ appKey %appKey.4 199 24 30 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 200 20 ]
+        symbol [ Application %tmp.38 200 20 31 ];
+        %tmp.38 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.39 200 32 39 ];
+        %tmp.39 = getv %tmp.38 :Storage;
+        symbol [ setValue %tmp.40 200 40 48 ];
+        %tmp.40 = getv function %tmp.39 :setValue;
+        %tmp.41 = "hueApplicationKey";
+        %tmp.42 = lgetv %appKey.4;
+        symbol [ appKey %tmp.42 200 70 76 ];
+        invoke %tmp.39 %tmp.40(%tmp.41, %tmp.42);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 201 20 ]
+        symbol [ System %tmp.43 201 20 26 ];
+        %tmp.43 = getm $.Toybox.System;
+        symbol [ println %tmp.44 201 27 34 ];
+        %tmp.44 = getv function %tmp.43 :println;
+        %tmp.45 = "Successfully registered app and stored key: ";
+        %tmp.46 = lgetv %appKey.4;
+        symbol [ appKey %tmp.46 201 84 90 ];
+        %tmp.47 = add %tmp.45 %tmp.46;
+        invoke %tmp.43 %tmp.44(%tmp.47);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 202 20 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_202_20_204_20_if_stmt:
+        symbol [ _view %tmp.49 202 24 29 ];
+        %tmp.49 = getv ? :_view;
+        %tmp.50 = null;
+        %tmp.51 = ne %tmp.49 %tmp.50;
+        bf %tmp.51 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_202_20_204_20_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_202_20_204_20_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_202_39_204_20_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 203 24 ]
+        symbol [ _view %tmp.53 203 24 29 ];
+        %tmp.53 = getv ? :_view;
+        %tmp.54 = as %tmp.53 { (!Null) };
+        symbol [ setState %tmp.55 203 30 38 ];
+        %tmp.55 = getv function %tmp.54 :setState;
+        symbol [ _view %tmp.57 203 40 45 ];
+        %tmp.57 = getv ? :_view;
+        %tmp.58 = as %tmp.57 { (!Null) };
+        %tmp.59 = as %tmp.58 GarminHueHeartbeatAppView;
+        symbol [ GarminHueHeartbeatAppView %tmp.59 203 49 74 ];
+        symbol [ STATE_FETCHING_DATA %tmp.60 203 76 95 ];
+        %tmp.60 = getv %tmp.59 :STATE_FETCHING_DATA;
+        invoke %tmp.54 %tmp.55(%tmp.60);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_202_39_204_20_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_202_20_204_20_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_202_20_204_20_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_197_52_205_16_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_197_16_212_16_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_197_16_212_16_if_false:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 205 23 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_205_23_212_16_if_stmt:
+        %tmp.61 = lgetv %responseDict.2;
+        symbol [ responseDict %tmp.61 205 27 39 ];
+        symbol [ hasKey %tmp.62 205 40 46 ];
+        %tmp.62 = getv function %tmp.61 :hasKey;
+        %tmp.63 = "error";
+        %tmp.64 = invoke %tmp.61 %tmp.62(%tmp.63);
+        bf %tmp.64 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_205_23_212_16_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_205_23_212_16_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_205_57_212_16_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 206 20 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_205_57_212_16_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_205_57_212_16_stop" ]
+        %errorData.5 = local;
+        symbol [ errorData %errorData.5 206 24 33 ];
+        %tmp.65 = lgetv %responseDict.2;
+        symbol [ responseDict %tmp.65 206 36 48 ];
+        %tmp.66 = "error";
+        %tmp.67 = agetv %tmp.65 %tmp.66;
+        %tmp.68 = as %tmp.67 Lang.Dictionary;
+        symbol [ Lang %tmp.68 206 61 65 ];
+        symbol [ Dictionary %tmp.68 206 66 76 ];
+        lputv %errorData.5 %tmp.68;
+        symbol [ errorData %errorData.5 206 24 33 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 207 20 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_205_57_212_16_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_205_57_212_16_stop" ]
+        %errorDescription.6 = local;
+        symbol [ errorDescription %errorDescription.6 207 24 40 ];
+        %tmp.69 = lgetv %errorData.5;
+        symbol [ errorData %tmp.69 207 43 52 ];
+        %tmp.70 = "description";
+        %tmp.71 = agetv %tmp.69 %tmp.70;
+        %tmp.72 = as %tmp.71 Lang.String;
+        symbol [ Lang %tmp.72 207 71 75 ];
+        symbol [ String %tmp.72 207 76 82 ];
+        lputv %errorDescription.6 %tmp.72;
+        symbol [ errorDescription %errorDescription.6 207 24 40 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 208 20 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_208_20_211_20_if_stmt:
+        symbol [ _view %tmp.74 208 24 29 ];
+        %tmp.74 = getv ? :_view;
+        %tmp.75 = null;
+        %tmp.76 = ne %tmp.74 %tmp.75;
+        bf %tmp.76 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_208_20_211_20_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_208_20_211_20_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_208_39_211_20_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 209 24 ]
+        symbol [ _view %tmp.78 209 24 29 ];
+        %tmp.78 = getv ? :_view;
+        %tmp.79 = as %tmp.78 { (!Null) };
+        symbol [ setMessage %tmp.80 209 30 40 ];
+        %tmp.80 = getv function %tmp.79 :setMessage;
+        %tmp.81 = "Reg Error:\n";
+        %tmp.82 = lgetv %errorDescription.6;
+        symbol [ errorDescription %tmp.82 209 58 74 ];
+        %tmp.83 = add %tmp.81 %tmp.82;
+        invoke %tmp.79 %tmp.80(%tmp.83);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 210 24 ]
+        symbol [ _view %tmp.85 210 24 29 ];
+        %tmp.85 = getv ? :_view;
+        symbol [ setState %tmp.86 210 30 38 ];
+        %tmp.86 = getv function %tmp.85 :setState;
+        symbol [ _view %tmp.88 210 40 45 ];
+        %tmp.88 = getv ? :_view;
+        %tmp.89 = as %tmp.88 GarminHueHeartbeatAppView;
+        symbol [ GarminHueHeartbeatAppView %tmp.89 210 49 74 ];
+        symbol [ STATE_ERROR %tmp.90 210 76 87 ];
+        %tmp.90 = getv %tmp.89 :STATE_ERROR;
+        invoke %tmp.85 %tmp.86(%tmp.90);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_208_39_211_20_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_208_20_211_20_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_208_20_211_20_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_205_57_212_16_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_205_23_212_16_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_205_23_212_16_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_197_16_212_16_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_59_213_12_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_12_218_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_12_218_12_if_else_false:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_213_19_218_12_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 214 17 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_214_17_217_16_if_stmt:
+        symbol [ _view %tmp.92 214 21 26 ];
+        %tmp.92 = getv ? :_view;
+        %tmp.93 = null;
+        %tmp.94 = ne %tmp.92 %tmp.93;
+        bf %tmp.94 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_214_17_217_16_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_214_17_217_16_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_214_36_217_16_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 215 20 ]
+        symbol [ _view %tmp.96 215 20 25 ];
+        %tmp.96 = getv ? :_view;
+        %tmp.97 = as %tmp.96 { (!Null) };
+        symbol [ setMessage %tmp.98 215 26 36 ];
+        %tmp.98 = getv function %tmp.97 :setMessage;
+        %tmp.99 = "Reg Failed\nEmpty Resp";
+        invoke %tmp.97 %tmp.98(%tmp.99);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 216 20 ]
+        symbol [ _view %tmp.101 216 20 25 ];
+        %tmp.101 = getv ? :_view;
+        symbol [ setState %tmp.102 216 26 34 ];
+        %tmp.102 = getv function %tmp.101 :setState;
+        symbol [ _view %tmp.104 216 36 41 ];
+        %tmp.104 = getv ? :_view;
+        %tmp.105 = as %tmp.104 GarminHueHeartbeatAppView;
+        symbol [ GarminHueHeartbeatAppView %tmp.105 216 45 70 ];
+        symbol [ STATE_ERROR %tmp.106 216 72 83 ];
+        %tmp.106 = getv %tmp.105 :STATE_ERROR;
+        invoke %tmp.101 %tmp.102(%tmp.106);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_214_36_217_16_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_214_17_217_16_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_214_17_217_16_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_213_19_218_12_stop:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_195_12_218_12_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_192_33_219_8_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_192_8_224_8_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_192_8_224_8_if_else_false:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_219_15_224_8_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 220 12 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_220_12_223_12_if_stmt:
+        symbol [ _view %tmp.108 220 16 21 ];
+        %tmp.108 = getv ? :_view;
+        %tmp.109 = null;
+        %tmp.110 = ne %tmp.108 %tmp.109;
+        bf %tmp.110 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_220_12_223_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_220_12_223_12_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_220_31_223_12_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 221 16 ]
+        symbol [ _view %tmp.112 221 16 21 ];
+        %tmp.112 = getv ? :_view;
+        %tmp.113 = as %tmp.112 { (!Null) };
+        symbol [ setMessage %tmp.114 221 22 32 ];
+        %tmp.114 = getv function %tmp.113 :setMessage;
+        %tmp.115 = "Reg Failed\nCode: ";
+        %tmp.116 = lgetv %responseCode;
+        symbol [ responseCode %tmp.116 221 56 68 ];
+        %tmp.117 = add %tmp.115 %tmp.116;
+        invoke %tmp.113 %tmp.114(%tmp.117);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 222 16 ]
+        symbol [ _view %tmp.119 222 16 21 ];
+        %tmp.119 = getv ? :_view;
+        symbol [ setState %tmp.120 222 22 30 ];
+        %tmp.120 = getv function %tmp.119 :setState;
+        symbol [ _view %tmp.122 222 32 37 ];
+        %tmp.122 = getv ? :_view;
+        %tmp.123 = as %tmp.122 GarminHueHeartbeatAppView;
+        symbol [ GarminHueHeartbeatAppView %tmp.123 222 41 66 ];
+        symbol [ STATE_ERROR %tmp.124 222 68 79 ];
+        %tmp.124 = getv %tmp.123 :STATE_ERROR;
+        invoke %tmp.119 %tmp.120(%tmp.124);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_220_31_223_12_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_220_12_223_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_220_12_223_12_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_219_15_224_8_stop:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_192_8_224_8_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_189_164_225_4_stop:
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 227; @symbol_functiondef = [getRooms,227,20,28]; ]
+    public
+    function getRooms() as Void {
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_227_39_252_4_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 228 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_227_39_252_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_227_39_252_4_stop" ]
+        %accessToken.1 = local;
+        symbol [ accessToken %accessToken.1 228 12 23 ];
+        symbol [ Application %tmp.1 228 26 37 ];
+        %tmp.1 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.2 228 38 45 ];
+        %tmp.2 = getv %tmp.1 :Storage;
+        symbol [ getValue %tmp.3 228 46 54 ];
+        %tmp.3 = getv function %tmp.2 :getValue;
+        %tmp.4 = "accessToken";
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        lputv %accessToken.1 %tmp.5;
+        symbol [ accessToken %accessToken.1 228 12 23 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 229 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_227_39_252_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_227_39_252_4_stop" ]
+        %appKey.2 = local;
+        symbol [ appKey %appKey.2 229 12 18 ];
+        symbol [ Application %tmp.6 229 21 32 ];
+        %tmp.6 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.7 229 33 40 ];
+        %tmp.7 = getv %tmp.6 :Storage;
+        symbol [ getValue %tmp.8 229 41 49 ];
+        %tmp.8 = getv function %tmp.7 :getValue;
+        %tmp.9 = "hueApplicationKey";
+        %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+        lputv %appKey.2 %tmp.10;
+        symbol [ appKey %appKey.2 229 12 18 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 230 8 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_230_8_237_8_if_stmt:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_230_12_230_45_begin:
+        %tmp.11 = lgetv %accessToken.1;
+        symbol [ accessToken %tmp.11 230 12 23 ];
+        %tmp.12 = null;
+        %tmp.13 = eq %tmp.11 %tmp.12;
+        bt %tmp.13 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_230_8_237_8_if_true;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_230_35_230_45_false:
+        %tmp.14 = lgetv %appKey.2;
+        symbol [ appKey %tmp.14 230 35 41 ];
+        %tmp.15 = null;
+        %tmp.16 = eq %tmp.14 %tmp.15;
+        push %tmp.16;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_230_35_230_45_end:
+        %tmp.17 = phi [%tmp.13 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_230_12_230_45_begin] [%tmp.16 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_230_35_230_45_false] [%tmp.17 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_230_35_230_45_end];
+        bf %tmp.17 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_230_8_237_8_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_230_8_237_8_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_230_51_237_8_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 231 12 ]
+        symbol [ System %tmp.18 231 12 18 ];
+        %tmp.18 = getm $.Toybox.System;
+        symbol [ println %tmp.19 231 19 26 ];
+        %tmp.19 = getv function %tmp.18 :println;
+        %tmp.20 = "Cannot get rooms, missing tokens or app key.";
+        invoke %tmp.18 %tmp.19(%tmp.20);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 232 12 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_232_12_235_12_if_stmt:
+        symbol [ _view %tmp.22 232 16 21 ];
+        %tmp.22 = getv ? :_view;
+        %tmp.23 = null;
+        %tmp.24 = ne %tmp.22 %tmp.23;
+        bf %tmp.24 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_232_12_235_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_232_12_235_12_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_232_31_235_12_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 233 16 ]
+        symbol [ _view %tmp.26 233 16 21 ];
+        %tmp.26 = getv ? :_view;
+        %tmp.27 = as %tmp.26 { (!Null) };
+        symbol [ setMessage %tmp.28 233 22 32 ];
+        %tmp.28 = getv function %tmp.27 :setMessage;
+        %tmp.29 = "Auth Error";
+        invoke %tmp.27 %tmp.28(%tmp.29);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 234 16 ]
+        symbol [ _view %tmp.31 234 16 21 ];
+        %tmp.31 = getv ? :_view;
+        symbol [ setState %tmp.32 234 22 30 ];
+        %tmp.32 = getv function %tmp.31 :setState;
+        symbol [ _view %tmp.34 234 32 37 ];
+        %tmp.34 = getv ? :_view;
+        %tmp.35 = as %tmp.34 GarminHueHeartbeatAppView;
+        symbol [ GarminHueHeartbeatAppView %tmp.35 234 41 66 ];
+        symbol [ STATE_ERROR %tmp.36 234 68 79 ];
+        %tmp.36 = getv %tmp.35 :STATE_ERROR;
+        invoke %tmp.31 %tmp.32(%tmp.36);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_232_31_235_12_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_232_12_235_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_232_12_235_12_if_end:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 236 12 ]
+        ret ?;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_230_51_237_8_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_230_8_237_8_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_230_8_237_8_if_end:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 239 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_227_39_252_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_227_39_252_4_stop" ]
+        %url.3 = local;
+        symbol [ url %url.3 239 12 15 ];
+        %tmp.37 = "https://api.meethue.com/route/clip/v2/resource/room";
+        lputv %url.3 %tmp.37;
+        symbol [ url %url.3 239 12 15 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 240 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_227_39_252_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_227_39_252_4_stop" ]
+        %params.4 = local;
+        symbol [ params %params.4 240 12 18 ];
+        %tmp.38 = newd 0;
+        lputv %params.4 %tmp.38;
+        symbol [ params %params.4 240 12 18 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 241 8 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_227_39_252_4_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_227_39_252_4_stop" ]
+        %options.5 = local;
+        symbol [ options %options.5 241 12 19 ];
+        %tmp.39 = newd 3;
+        %tmp.41 = const :method;
+        symbol [ method %tmp.41 242 13 19 const ];
+        symbol [ Communications %tmp.42 242 23 37 ];
+        %tmp.42 = getm $.Toybox.Communications;
+        symbol [ HTTP_REQUEST_METHOD_GET %tmp.43 242 38 61 ];
+        %tmp.43 = getv %tmp.42 :HTTP_REQUEST_METHOD_GET;
+        %tmp.44 = dup %tmp.39;
+        %tmp.45 = aputv %tmp.44 %tmp.41 %tmp.43;
+        %tmp.47 = const :headers;
+        symbol [ headers %tmp.47 243 13 20 const ];
+        %tmp.48 = newd 2;
+        %tmp.49 = "Authorization";
+        %tmp.50 = "Bearer ";
+        %tmp.51 = lgetv %accessToken.1;
+        symbol [ accessToken %tmp.51 244 47 58 ];
+        %tmp.52 = add %tmp.50 %tmp.51;
+        %tmp.53 = dup %tmp.48;
+        %tmp.54 = aputv %tmp.53 %tmp.49 %tmp.52;
+        %tmp.55 = "hue-application-key";
+        %tmp.56 = lgetv %appKey.2;
+        symbol [ appKey %tmp.56 245 41 47 ];
+        %tmp.57 = dup %tmp.54;
+        %tmp.58 = aputv %tmp.57 %tmp.55 %tmp.56;
+        %tmp.59 = dup %tmp.45;
+        %tmp.60 = aputv %tmp.59 %tmp.47 %tmp.58;
+        %tmp.62 = const :responseType;
+        symbol [ responseType %tmp.62 247 13 25 const ];
+        symbol [ Communications %tmp.63 247 29 43 ];
+        %tmp.63 = getm $.Toybox.Communications;
+        symbol [ HTTP_RESPONSE_CONTENT_TYPE_JSON %tmp.64 247 44 75 ];
+        %tmp.64 = getv %tmp.63 :HTTP_RESPONSE_CONTENT_TYPE_JSON;
+        %tmp.65 = dup %tmp.60;
+        %tmp.66 = aputv %tmp.65 %tmp.62 %tmp.64;
+        lputv %options.5 %tmp.66;
+        symbol [ options %options.5 241 12 19 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 250 8 ]
+        symbol [ System %tmp.67 250 8 14 ];
+        %tmp.67 = getm $.Toybox.System;
+        symbol [ println %tmp.68 250 15 22 ];
+        %tmp.68 = getv function %tmp.67 :println;
+        %tmp.69 = "Making get rooms request to: ";
+        %tmp.70 = lgetv %url.3;
+        symbol [ url %tmp.70 250 57 60 ];
+        %tmp.71 = add %tmp.69 %tmp.70;
+        invoke %tmp.67 %tmp.68(%tmp.71);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 251 8 ]
+        symbol [ Communications %tmp.72 251 8 22 ];
+        %tmp.72 = getm $.Toybox.Communications;
+        symbol [ makeWebRequest %tmp.73 251 23 37 ];
+        %tmp.73 = getv function %tmp.72 :makeWebRequest;
+        %tmp.74 = lgetv %url.3;
+        symbol [ url %tmp.74 251 38 41 ];
+        %tmp.75 = lgetv %params.4;
+        symbol [ params %tmp.75 251 43 49 ];
+        %tmp.76 = lgetv %options.5;
+        symbol [ options %tmp.76 251 51 58 ];
+        %tmp.77 = self;
+        symbol [ method %tmp.78 251 60 66 ];
+        %tmp.78 = getv function %tmp.77 :method;
+        %tmp.80 = const :onGetRoomsResponse;
+        symbol [ onGetRoomsResponse %tmp.80 251 68 86 const ];
+        %tmp.81 = invoke %tmp.77 %tmp.78(%tmp.80);
+        invoke %tmp.72 %tmp.73(%tmp.74, %tmp.75, %tmp.76, %tmp.81);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_227_39_252_4_stop:
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 254; @symbol_functiondef = [onGetRoomsResponse,254,20,38]; @symbol_param<0> = [responseCode,254,39,51]; @symbol_param<0>_type<0> = [Lang,254,55,59]; @symbol_param<0>_type<1> = [Number,254,60,66]; @symbol_param<1> = [data,254,68,72]; @symbol_param<1>_type<0> = [Lang,254,84,88]; @symbol_param<1>_type<1> = [Dictionary,254,89,99]; @symbol_param<1>_type<2> = [Lang,254,103,107]; @symbol_param<1>_type<3> = [String,254,108,114]; @symbol_param<1>_type<4> = [PersistedContent,254,118,134]; @symbol_param<1>_type<5> = [Iterator,254,135,143]; ]
+    public
+    function onGetRoomsResponse(responseCode as Lang.Number, data as Null or Lang.Dictionary or Lang.String or PersistedContent.Iterator) as Void {
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_254_153_283_4_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 255 8 ]
+        symbol [ System %tmp.1 255 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 255 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "onGetRoomsResponse triggered. Code: ";
+        %tmp.4 = lgetv %responseCode;
+        symbol [ responseCode %tmp.4 255 64 76 ];
+        %tmp.5 = add %tmp.3 %tmp.4;
+        invoke %tmp.1 %tmp.2(%tmp.5);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 256 8 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_8_282_8_if_stmt:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_12_256_56_begin:
+        %tmp.6 = lgetv %responseCode;
+        symbol [ responseCode %tmp.6 256 12 24 ];
+        %tmp.7 = 200;
+        %tmp.8 = eq %tmp.6 %tmp.7;
+        bf %tmp.8 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_8_282_8_if_else_false;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_35_256_56_true:
+        %tmp.9 = lgetv %data;
+        symbol [ data %tmp.9 256 35 39 ];
+        symbol [ Lang %tmp.10 256 51 55 ];
+        %tmp.10 = getm $.Toybox.Lang;
+        symbol [ Dictionary %tmp.11 256 56 66 ];
+        %tmp.11 = getv %tmp.10 :Dictionary;
+        %tmp.12 = isa %tmp.9 %tmp.11;
+        push %tmp.12;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_35_256_56_end:
+        %tmp.13 = phi [%tmp.8 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_12_256_56_begin] [%tmp.12 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_35_256_56_true] [%tmp.13 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_35_256_56_end];
+        bf %tmp.13 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_8_282_8_if_else_false;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_8_282_8_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_68_276_8_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 257 12 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_68_276_8_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_68_276_8_stop" ]
+        %rooms.1 = local;
+        symbol [ rooms %rooms.1 257 16 21 ];
+        %tmp.14 = newa 0 Lang.Array<Lang.Dictionary>;
+        symbol [ Lang %tmp.14 257 30 34 ];
+        symbol [ Array %tmp.14 257 35 40 ];
+        symbol [ Lang %tmp.14 257 41 45 ];
+        symbol [ Dictionary %tmp.14 257 46 56 ];
+        lputv %rooms.1 %tmp.14;
+        symbol [ rooms %rooms.1 257 16 21 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 258 12 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_68_276_8_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_68_276_8_stop" ]
+        %dataDict.2 = local;
+        symbol [ dataDict %dataDict.2 258 16 24 ];
+        %tmp.15 = lgetv %data;
+        symbol [ data %tmp.15 258 27 31 ];
+        %tmp.16 = as %tmp.15 { (Lang.Dictionary) };
+        %tmp.17 = as %tmp.16 Lang.Dictionary;
+        symbol [ Lang %tmp.17 258 35 39 ];
+        symbol [ Dictionary %tmp.17 258 40 50 ];
+        lputv %dataDict.2 %tmp.17;
+        symbol [ dataDict %dataDict.2 258 16 24 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 259 12 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_259_12_271_12_if_stmt:
+        %tmp.18 = lgetv %dataDict.2;
+        symbol [ dataDict %tmp.18 259 16 24 ];
+        symbol [ hasKey %tmp.19 259 25 31 ];
+        %tmp.19 = getv function %tmp.18 :hasKey;
+        %tmp.20 = "data";
+        %tmp.21 = invoke %tmp.18 %tmp.19(%tmp.20);
+        bf %tmp.21 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_259_12_271_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_259_12_271_12_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_259_41_271_12_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 260 16 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_259_41_271_12_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_259_41_271_12_stop" ]
+        %roomsData.3 = local;
+        symbol [ roomsData %roomsData.3 260 20 29 ];
+        %tmp.22 = lgetv %dataDict.2;
+        symbol [ dataDict %tmp.22 260 32 40 ];
+        %tmp.23 = "data";
+        %tmp.24 = agetv %tmp.22 %tmp.23;
+        %tmp.25 = as %tmp.24 Lang.Array<Lang.Dictionary>;
+        symbol [ Lang %tmp.25 260 52 56 ];
+        symbol [ Array %tmp.25 260 57 62 ];
+        symbol [ Lang %tmp.25 260 63 67 ];
+        symbol [ Dictionary %tmp.25 260 68 78 ];
+        lputv %roomsData.3 %tmp.25;
+        symbol [ roomsData %roomsData.3 260 20 29 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 261 16 ]
+        for @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_16_270_16_for_test @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_16_270_16_for_incr @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_16_270_16_for_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_16_270_16_for_init:
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_16_270_16_for_begin" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_16_270_16_for_end" ]
+        %i.4 = local;
+        symbol [ i %i.4 261 25 26 ];
+        %tmp.26 = 0;
+        lputv %i.4 %tmp.26;
+        symbol [ i %i.4 261 25 26 ];
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_16_270_16_for_test:
+        %tmp.27 = lgetv %i.4;
+        symbol [ i %tmp.27 261 32 33 ];
+        %tmp.28 = lgetv %roomsData.3;
+        symbol [ roomsData %tmp.28 261 36 45 ];
+        symbol [ size %tmp.29 261 46 50 ];
+        %tmp.29 = getv function %tmp.28 :size;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        %tmp.31 = lt %tmp.27 %tmp.30;
+        bf %tmp.31 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_16_270_16_for_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_16_270_16_for_begin:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_59_270_16_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 262 20 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_59_270_16_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_59_270_16_stop" ]
+        %roomData.5 = local;
+        symbol [ roomData %roomData.5 262 24 32 ];
+        %tmp.32 = lgetv %roomsData.3;
+        symbol [ roomsData %tmp.32 262 35 44 ];
+        %tmp.33 = lgetv %i.4;
+        symbol [ i %tmp.33 262 45 46 ];
+        %tmp.34 = agetv %tmp.32 %tmp.33;
+        lputv %roomData.5 %tmp.34;
+        symbol [ roomData %roomData.5 262 24 32 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 263 20 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_20_269_20_if_stmt:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_24_263_81_begin:
+        %tmp.35 = lgetv %roomData.5;
+        symbol [ roomData %tmp.35 263 24 32 ];
+        symbol [ hasKey %tmp.36 263 33 39 ];
+        %tmp.36 = getv function %tmp.35 :hasKey;
+        %tmp.37 = "type";
+        %tmp.38 = invoke %tmp.35 %tmp.36(%tmp.37);
+        bf %tmp.38 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_20_269_20_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_51_263_81_true:
+        %tmp.39 = "room";
+        symbol [ equals %tmp.40 263 58 64 ];
+        %tmp.40 = getv function %tmp.39 :equals;
+        %tmp.41 = lgetv %roomData.5;
+        symbol [ roomData %tmp.41 263 65 73 ];
+        %tmp.42 = "type";
+        %tmp.43 = agetv %tmp.41 %tmp.42;
+        %tmp.44 = invoke %tmp.39 %tmp.40(%tmp.43);
+        push %tmp.44;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_51_263_81_end:
+        %tmp.45 = phi [%tmp.38 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_24_263_81_begin] [%tmp.44 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_51_263_81_true] [%tmp.45 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_51_263_81_end];
+        bf %tmp.45 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_20_269_20_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_20_269_20_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_84_269_20_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 264 24 ]
+        [ "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_84_269_20_start" "C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_84_269_20_stop" ]
+        %metadata.6 = local;
+        symbol [ metadata %metadata.6 264 28 36 ];
+        %tmp.46 = lgetv %roomData.5;
+        symbol [ roomData %tmp.46 264 39 47 ];
+        %tmp.47 = "metadata";
+        %tmp.48 = agetv %tmp.46 %tmp.47;
+        %tmp.49 = as %tmp.48 Lang.Dictionary;
+        symbol [ Lang %tmp.49 264 63 67 ];
+        symbol [ Dictionary %tmp.49 264 68 78 ];
+        lputv %metadata.6 %tmp.49;
+        symbol [ metadata %metadata.6 264 28 36 ];
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 265 24 ]
+        %tmp.50 = lgetv %rooms.1;
+        symbol [ rooms %tmp.50 265 24 29 ];
+        symbol [ add %tmp.51 265 30 33 ];
+        %tmp.51 = getv function %tmp.50 :add;
+        %tmp.52 = newd 2;
+        %tmp.53 = "id";
+        %tmp.54 = lgetv %roomData.5;
+        symbol [ roomData %tmp.54 266 36 44 ];
+        %tmp.55 = "id";
+        %tmp.56 = agetv %tmp.54 %tmp.55;
+        %tmp.57 = dup %tmp.52;
+        %tmp.58 = aputv %tmp.57 %tmp.53 %tmp.56;
+        %tmp.59 = "name";
+        %tmp.60 = lgetv %metadata.6;
+        symbol [ metadata %tmp.60 267 38 46 ];
+        %tmp.61 = "name";
+        %tmp.62 = agetv %tmp.60 %tmp.61;
+        %tmp.63 = dup %tmp.58;
+        %tmp.64 = aputv %tmp.63 %tmp.59 %tmp.62;
+        invoke %tmp.50 %tmp.51(%tmp.64);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_84_269_20_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_20_269_20_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_263_20_269_20_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_59_270_16_stop:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_16_270_16_for_incr:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 261 ]
+        %tmp.67 = lgetv %i.4;
+        symbol [ i %tmp.67 261 54 55 ];
+        %tmp.68 = add %tmp.67 1;
+        lputv %i.4 %tmp.68;
+        symbol [ i %i.4 261 54 55 ];
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_16_270_16_for_test;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_261_16_270_16_for_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_259_41_271_12_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_259_12_271_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_259_12_271_12_if_end:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 272 12 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_272_12_275_12_if_stmt:
+        symbol [ _view %tmp.70 272 16 21 ];
+        %tmp.70 = getv ? :_view;
+        %tmp.71 = null;
+        %tmp.72 = ne %tmp.70 %tmp.71;
+        bf %tmp.72 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_272_12_275_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_272_12_275_12_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_272_31_275_12_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 273 16 ]
+        symbol [ _view %tmp.74 273 16 21 ];
+        %tmp.74 = getv ? :_view;
+        %tmp.75 = as %tmp.74 { (!Null) };
+        symbol [ setRooms %tmp.76 273 22 30 ];
+        %tmp.76 = getv function %tmp.75 :setRooms;
+        %tmp.77 = lgetv %rooms.1;
+        symbol [ rooms %tmp.77 273 31 36 ];
+        invoke %tmp.75 %tmp.76(%tmp.77);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 274 16 ]
+        symbol [ _view %tmp.79 274 16 21 ];
+        %tmp.79 = getv ? :_view;
+        symbol [ setState %tmp.80 274 22 30 ];
+        %tmp.80 = getv function %tmp.79 :setState;
+        symbol [ _view %tmp.82 274 32 37 ];
+        %tmp.82 = getv ? :_view;
+        %tmp.83 = as %tmp.82 GarminHueHeartbeatAppView;
+        symbol [ GarminHueHeartbeatAppView %tmp.83 274 41 66 ];
+        symbol [ STATE_SELECT_ROOM %tmp.84 274 68 85 ];
+        %tmp.84 = getv %tmp.83 :STATE_SELECT_ROOM;
+        invoke %tmp.79 %tmp.80(%tmp.84);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_272_31_275_12_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_272_12_275_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_272_12_275_12_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_68_276_8_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_8_282_8_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_8_282_8_if_else_false:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_276_15_282_8_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 277 12 ]
+        symbol [ System %tmp.85 277 12 18 ];
+        %tmp.85 = getm $.Toybox.System;
+        symbol [ println %tmp.86 277 19 26 ];
+        %tmp.86 = getv function %tmp.85 :println;
+        %tmp.87 = "Get rooms failed with code: ";
+        %tmp.88 = lgetv %responseCode;
+        symbol [ responseCode %tmp.88 277 60 72 ];
+        %tmp.89 = add %tmp.87 %tmp.88;
+        invoke %tmp.85 %tmp.86(%tmp.89);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 278 12 ]
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_278_12_281_12_if_stmt:
+        symbol [ _view %tmp.91 278 16 21 ];
+        %tmp.91 = getv ? :_view;
+        %tmp.92 = null;
+        %tmp.93 = ne %tmp.91 %tmp.92;
+        bf %tmp.93 @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_278_12_281_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_278_12_281_12_if_true:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_278_31_281_12_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 279 16 ]
+        symbol [ _view %tmp.95 279 16 21 ];
+        %tmp.95 = getv ? :_view;
+        %tmp.96 = as %tmp.95 { (!Null) };
+        symbol [ setMessage %tmp.97 279 22 32 ];
+        %tmp.97 = getv function %tmp.96 :setMessage;
+        %tmp.98 = "Get Rooms Fail\nCode: ";
+        %tmp.99 = lgetv %responseCode;
+        symbol [ responseCode %tmp.99 279 60 72 ];
+        %tmp.100 = add %tmp.98 %tmp.99;
+        invoke %tmp.96 %tmp.97(%tmp.100);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 280 16 ]
+        symbol [ _view %tmp.102 280 16 21 ];
+        %tmp.102 = getv ? :_view;
+        symbol [ setState %tmp.103 280 22 30 ];
+        %tmp.103 = getv function %tmp.102 :setState;
+        symbol [ _view %tmp.105 280 32 37 ];
+        %tmp.105 = getv ? :_view;
+        %tmp.106 = as %tmp.105 GarminHueHeartbeatAppView;
+        symbol [ GarminHueHeartbeatAppView %tmp.106 280 41 66 ];
+        symbol [ STATE_ERROR %tmp.107 280 68 79 ];
+        %tmp.107 = getv %tmp.106 :STATE_ERROR;
+        invoke %tmp.102 %tmp.103(%tmp.107);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_278_31_281_12_stop:
+        goto @C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_278_12_281_12_if_end;
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_278_12_281_12_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_276_15_282_8_stop:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_256_8_282_8_if_end:
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_254_153_283_4_stop:
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 285; @symbol_functiondef = [setHeartRate,285,13,25]; @symbol_param<0> = [hr,285,26,28]; @symbol_param<0>_type<0> = [Lang,285,32,36]; @symbol_param<0>_type<1> = [Number,285,37,43]; ]
+    function setHeartRate(hr as Lang.Number) as Void {
+    }
+    [ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 288; @symbol_functiondef = [setSelectedRoomId,288,13,30]; @symbol_param<0> = [roomId,288,31,37]; @symbol_param<0>_type<0> = [Lang,288,41,45]; @symbol_param<0>_type<1> = [String,288,46,52]; ]
+    function setSelectedRoomId(roomId as Lang.String) as Void {
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_288_62_291_4_start:
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 289 8 ]
+        symbol [ Application %tmp.1 289 8 19 ];
+        %tmp.1 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.2 289 20 27 ];
+        %tmp.2 = getv %tmp.1 :Storage;
+        symbol [ setValue %tmp.3 289 28 36 ];
+        %tmp.3 = getv function %tmp.2 :setValue;
+        %tmp.4 = "selectedRoomId";
+        %tmp.5 = lgetv %roomId;
+        symbol [ roomId %tmp.5 289 55 61 ];
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
+[ "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc" 290 8 ]
+        symbol [ System %tmp.6 290 8 14 ];
+        %tmp.6 = getm $.Toybox.System;
+        symbol [ println %tmp.7 290 15 22 ];
+        %tmp.7 = getv function %tmp.6 :println;
+        %tmp.8 = "Selected room ID stored: ";
+        %tmp.9 = lgetv %roomId;
+        symbol [ roomId %tmp.9 290 53 59 ];
+        %tmp.10 = add %tmp.8 %tmp.9;
+        invoke %tmp.6 %tmp.7(%tmp.10);
+C__Users_okk19_Documents_Garmin_Development_OKK_GarminHueHeartbeatApp_source_HueController_mc_288_62_291_4_stop:
+    }
+}
+[ @file = "C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\source\HueController.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,11 @@
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <string id="AppName">GarminHueHeartbeatApp</string>
+
+    <string id="prompt">Click the menu button</string>
+
+    <string id="menu_label_1">Item 1</string>
+    <string id="menu_label_2">Item 2</string>
+
+    <string id="clientId">e8297a7b-9e88-42f1-a251-129e029c524b</string>
+    <string id="clientSecret">dcf835515bdea8cbf2b77bd267703aa7</string>
+</strings>

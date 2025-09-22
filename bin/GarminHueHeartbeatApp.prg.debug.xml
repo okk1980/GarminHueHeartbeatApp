@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<manifest filename="C:\Users\okk19\Documents\Garmin Development OKK\GarminHueHeartbeatApp\manifest.xml"/>
+<pcToLineNum>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="1" lineNum="60" parent="globals" pc="268435460" symbol="getApp"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="1" lineNum="61" parent="globals" pc="268435470" symbol="getApp"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppDelegate.mc" id="2" lineNum="6" parent="globals/GarminHueHeartbeatAppDelegate" pc="268435481" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="3" lineNum="9" parent="globals/GarminHueHeartbeatAppApp" pc="268435493" symbol="&lt;init&gt;"/>
+<entry filename="c:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435505" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="5" lineNum="8" parent="globals/GarminHueHeartbeatAppView" pc="268435525" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="6" lineNum="6" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268435537" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="7" lineNum="156" parent="globals/HueController" pc="268435549" symbol="onEnableLinkButtonResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="7" lineNum="157" parent="globals/HueController" pc="268435551" symbol="onEnableLinkButtonResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="7" lineNum="158" parent="globals/HueController" pc="268435572" symbol="onEnableLinkButtonResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="7" lineNum="159" parent="globals/HueController" pc="268435581" symbol="onEnableLinkButtonResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="7" lineNum="160" parent="globals/HueController" pc="268435599" symbol="onEnableLinkButtonResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="7" lineNum="162" parent="globals/HueController" pc="268435609" symbol="onEnableLinkButtonResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="7" lineNum="163" parent="globals/HueController" pc="268435630" symbol="onEnableLinkButtonResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="7" lineNum="164" parent="globals/HueController" pc="268435639" symbol="onEnableLinkButtonResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="7" lineNum="165" parent="globals/HueController" pc="268435661" symbol="onEnableLinkButtonResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="254" parent="globals/HueController" pc="268435689" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="255" parent="globals/HueController" pc="268435692" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="256" parent="globals/HueController" pc="268435713" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="257" parent="globals/HueController" pc="268435737" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="258" parent="globals/HueController" pc="268435741" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="259" parent="globals/HueController" pc="268435745" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="260" parent="globals/HueController" pc="268435762" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="261" parent="globals/HueController" pc="268435772" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="262" parent="globals/HueController" pc="268435788" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="263" parent="globals/HueController" pc="268435795" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="264" parent="globals/HueController" pc="268435836" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="265" parent="globals/HueController" pc="268435846" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="272" parent="globals/HueController" pc="268435905" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="273" parent="globals/HueController" pc="268435914" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="274" parent="globals/HueController" pc="268435930" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="277" parent="globals/HueController" pc="268435960" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="278" parent="globals/HueController" pc="268435981" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="279" parent="globals/HueController" pc="268435990" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="8" lineNum="280" parent="globals/HueController" pc="268436012" symbol="onGetRoomsResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="9" lineNum="92" parent="globals/HueController" pc="268436040" symbol="hasTokens"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="9" lineNum="93" parent="globals/HueController" pc="268436043" symbol="hasTokens"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="9" lineNum="94" parent="globals/HueController" pc="268436062" symbol="hasTokens"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="9" lineNum="95" parent="globals/HueController" pc="268436081" symbol="hasTokens"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="98" parent="globals/HueController" pc="268436094" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="99" parent="globals/HueController" pc="268436097" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="100" parent="globals/HueController" pc="268436118" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="101" parent="globals/HueController" pc="268436142" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="102" parent="globals/HueController" pc="268436160" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="103" parent="globals/HueController" pc="268436164" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="104" parent="globals/HueController" pc="268436179" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="105" parent="globals/HueController" pc="268436194" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="107" parent="globals/HueController" pc="268436204" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="108" parent="globals/HueController" pc="268436227" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="109" parent="globals/HueController" pc="268436250" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="110" parent="globals/HueController" pc="268436275" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="112" parent="globals/HueController" pc="268436298" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="113" parent="globals/HueController" pc="268436316" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="114" parent="globals/HueController" pc="268436335" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="115" parent="globals/HueController" pc="268436341" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="116" parent="globals/HueController" pc="268436359" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="118" parent="globals/HueController" pc="268436369" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="119" parent="globals/HueController" pc="268436387" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="120" parent="globals/HueController" pc="268436396" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="124" parent="globals/HueController" pc="268436426" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="125" parent="globals/HueController" pc="268436447" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="126" parent="globals/HueController" pc="268436456" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="10" lineNum="127" parent="globals/HueController" pc="268436478" symbol="onTokenResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="11" lineNum="132" parent="globals/HueController" pc="268436506" symbol="startRegistration"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="11" lineNum="133" parent="globals/HueController" pc="268436508" symbol="startRegistration"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="11" lineNum="134" parent="globals/HueController" pc="268436526" symbol="startRegistration"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="12" lineNum="170" parent="globals/HueController" pc="268436534" symbol="registerApplication"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="12" lineNum="171" parent="globals/HueController" pc="268436537" symbol="registerApplication"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="12" lineNum="172" parent="globals/HueController" pc="268436556" symbol="registerApplication"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="12" lineNum="173" parent="globals/HueController" pc="268436563" symbol="registerApplication"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="12" lineNum="176" parent="globals/HueController" pc="268436570" symbol="registerApplication"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="12" lineNum="185" parent="globals/HueController" pc="268436619" symbol="registerApplication"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="12" lineNum="186" parent="globals/HueController" pc="268436640" symbol="registerApplication"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="13" lineNum="288" parent="globals/HueController" pc="268436673" symbol="setSelectedRoomId"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="13" lineNum="289" parent="globals/HueController" pc="268436675" symbol="setSelectedRoomId"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="13" lineNum="290" parent="globals/HueController" pc="268436695" symbol="setSelectedRoomId"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="189" parent="globals/HueController" pc="268436717" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="190" parent="globals/HueController" pc="268436720" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="192" parent="globals/HueController" pc="268436741" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="194" parent="globals/HueController" pc="268436750" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="195" parent="globals/HueController" pc="268436754" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="196" parent="globals/HueController" pc="268436773" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="197" parent="globals/HueController" pc="268436779" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="198" parent="globals/HueController" pc="268436796" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="199" parent="globals/HueController" pc="268436806" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="200" parent="globals/HueController" pc="268436816" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="201" parent="globals/HueController" pc="268436836" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="202" parent="globals/HueController" pc="268436857" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="203" parent="globals/HueController" pc="268436866" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="205" parent="globals/HueController" pc="268436896" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="206" parent="globals/HueController" pc="268436913" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="207" parent="globals/HueController" pc="268436923" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="208" parent="globals/HueController" pc="268436933" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="209" parent="globals/HueController" pc="268436942" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="210" parent="globals/HueController" pc="268436964" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="214" parent="globals/HueController" pc="268436997" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="215" parent="globals/HueController" pc="268437006" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="216" parent="globals/HueController" pc="268437025" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="220" parent="globals/HueController" pc="268437055" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="221" parent="globals/HueController" pc="268437064" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="14" lineNum="222" parent="globals/HueController" pc="268437086" symbol="onRegisterApplicationResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="15" lineNum="29" parent="globals/HueController" pc="268437114" symbol="setView"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="15" lineNum="30" parent="globals/HueController" pc="268437116" symbol="setView"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="16" lineNum="285" parent="globals/HueController" pc="268437126" symbol="setHeartRate"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="17" lineNum="47" parent="globals/HueController" pc="268437129" symbol="exchangeCodeForToken"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="17" lineNum="48" parent="globals/HueController" pc="268437132" symbol="exchangeCodeForToken"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="17" lineNum="49" parent="globals/HueController" pc="268437150" symbol="exchangeCodeForToken"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="17" lineNum="50" parent="globals/HueController" pc="268437157" symbol="exchangeCodeForToken"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="17" lineNum="57" parent="globals/HueController" pc="268437174" symbol="exchangeCodeForToken"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="17" lineNum="59" parent="globals/HueController" pc="268437211" symbol="exchangeCodeForToken"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="17" lineNum="68" parent="globals/HueController" pc="268437254" symbol="exchangeCodeForToken"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="18" lineNum="227" parent="globals/HueController" pc="268437287" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="18" lineNum="228" parent="globals/HueController" pc="268437290" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="18" lineNum="229" parent="globals/HueController" pc="268437309" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="18" lineNum="230" parent="globals/HueController" pc="268437328" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="18" lineNum="231" parent="globals/HueController" pc="268437340" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="18" lineNum="232" parent="globals/HueController" pc="268437358" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="18" lineNum="233" parent="globals/HueController" pc="268437367" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="18" lineNum="234" parent="globals/HueController" pc="268437386" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="18" lineNum="236" parent="globals/HueController" pc="268437413" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="18" lineNum="239" parent="globals/HueController" pc="268437417" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="18" lineNum="240" parent="globals/HueController" pc="268437424" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="18" lineNum="241" parent="globals/HueController" pc="268437428" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="18" lineNum="250" parent="globals/HueController" pc="268437483" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="18" lineNum="251" parent="globals/HueController" pc="268437504" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="19" lineNum="23" parent="globals/HueController" pc="268437537" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="19" lineNum="24" parent="globals/HueController" pc="268437539" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="19" lineNum="25" parent="globals/HueController" pc="268437577" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="19" lineNum="26" parent="globals/HueController" pc="268437615" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="20" lineNum="137" parent="globals/HueController" pc="268437628" symbol="enableLinkButton"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="20" lineNum="138" parent="globals/HueController" pc="268437631" symbol="enableLinkButton"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="20" lineNum="139" parent="globals/HueController" pc="268437650" symbol="enableLinkButton"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="20" lineNum="140" parent="globals/HueController" pc="268437657" symbol="enableLinkButton"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="20" lineNum="143" parent="globals/HueController" pc="268437664" symbol="enableLinkButton"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="20" lineNum="152" parent="globals/HueController" pc="268437713" symbol="enableLinkButton"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="20" lineNum="153" parent="globals/HueController" pc="268437734" symbol="enableLinkButton"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="21" lineNum="33" parent="globals/HueController" pc="268437767" symbol="onOAuthResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="21" lineNum="34" parent="globals/HueController" pc="268437770" symbol="onOAuthResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="21" lineNum="35" parent="globals/HueController" pc="268437788" symbol="onOAuthResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="21" lineNum="36" parent="globals/HueController" pc="268437812" symbol="onOAuthResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="21" lineNum="37" parent="globals/HueController" pc="268437822" symbol="onOAuthResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="21" lineNum="39" parent="globals/HueController" pc="268437836" symbol="onOAuthResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="21" lineNum="40" parent="globals/HueController" pc="268437854" symbol="onOAuthResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="21" lineNum="41" parent="globals/HueController" pc="268437863" symbol="onOAuthResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="21" lineNum="42" parent="globals/HueController" pc="268437882" symbol="onOAuthResponse"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="22" lineNum="71" parent="globals/HueController" pc="268437910" symbol="authorize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="22" lineNum="72" parent="globals/HueController" pc="268437913" symbol="authorize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\HueController.mc" id="22" lineNum="83" parent="globals/HueController" pc="268437933" symbol="authorize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppDelegate.mc" id="23" lineNum="16" parent="globals/GarminHueHeartbeatAppDelegate" pc="268437965" symbol="onMenu"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppDelegate.mc" id="23" lineNum="17" parent="globals/GarminHueHeartbeatAppDelegate" pc="268437968" symbol="onMenu"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppDelegate.mc" id="23" lineNum="19" parent="globals/GarminHueHeartbeatAppDelegate" pc="268438008" symbol="onMenu"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppDelegate.mc" id="23" lineNum="20" parent="globals/GarminHueHeartbeatAppDelegate" pc="268438022" symbol="onMenu"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppDelegate.mc" id="23" lineNum="22" parent="globals/GarminHueHeartbeatAppDelegate" pc="268438069" symbol="onMenu"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppDelegate.mc" id="23" lineNum="26" parent="globals/GarminHueHeartbeatAppDelegate" pc="268438113" symbol="onMenu"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppDelegate.mc" id="23" lineNum="27" parent="globals/GarminHueHeartbeatAppDelegate" pc="268438158" symbol="onMenu"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppDelegate.mc" id="24" lineNum="10" parent="globals/GarminHueHeartbeatAppDelegate" pc="268438160" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppDelegate.mc" id="24" lineNum="11" parent="globals/GarminHueHeartbeatAppDelegate" pc="268438162" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppDelegate.mc" id="24" lineNum="12" parent="globals/GarminHueHeartbeatAppDelegate" pc="268438174" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppDelegate.mc" id="24" lineNum="13" parent="globals/GarminHueHeartbeatAppDelegate" pc="268438183" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="25" lineNum="24" parent="globals/GarminHueHeartbeatAppApp" pc="268438193" symbol="onStart"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="25" lineNum="27" parent="globals/GarminHueHeartbeatAppApp" pc="268438195" symbol="onStart"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="25" lineNum="28" parent="globals/GarminHueHeartbeatAppApp" pc="268438213" symbol="onStart"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="25" lineNum="29" parent="globals/GarminHueHeartbeatAppApp" pc="268438231" symbol="onStart"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="26" lineNum="45" parent="globals/GarminHueHeartbeatAppApp" pc="268438250" symbol="onOAuthMessage"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="26" lineNum="46" parent="globals/GarminHueHeartbeatAppApp" pc="268438252" symbol="onOAuthMessage"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="26" lineNum="48" parent="globals/GarminHueHeartbeatAppApp" pc="268438277" symbol="onOAuthMessage"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="26" lineNum="51" parent="globals/GarminHueHeartbeatAppApp" pc="268438290" symbol="onOAuthMessage"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="26" lineNum="53" parent="globals/GarminHueHeartbeatAppApp" pc="268438313" symbol="onOAuthMessage"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="26" lineNum="54" parent="globals/GarminHueHeartbeatAppApp" pc="268438339" symbol="onOAuthMessage"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="26" lineNum="55" parent="globals/GarminHueHeartbeatAppApp" pc="268438355" symbol="onOAuthMessage"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="27" lineNum="36" parent="globals/GarminHueHeartbeatAppApp" pc="268438374" symbol="getInitialView"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="27" lineNum="37" parent="globals/GarminHueHeartbeatAppApp" pc="268438376" symbol="getInitialView"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="28" lineNum="15" parent="globals/GarminHueHeartbeatAppApp" pc="268438397" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="28" lineNum="16" parent="globals/GarminHueHeartbeatAppApp" pc="268438399" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="28" lineNum="17" parent="globals/GarminHueHeartbeatAppApp" pc="268438411" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="28" lineNum="18" parent="globals/GarminHueHeartbeatAppApp" pc="268438436" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="28" lineNum="19" parent="globals/GarminHueHeartbeatAppApp" pc="268438466" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="28" lineNum="21" parent="globals/GarminHueHeartbeatAppApp" pc="268438501" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="29" lineNum="40" parent="globals/GarminHueHeartbeatAppApp" pc="268438528" symbol="getHueController"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="29" lineNum="41" parent="globals/GarminHueHeartbeatAppApp" pc="268438530" symbol="getHueController"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppApp.mc" id="30" lineNum="32" parent="globals/GarminHueHeartbeatAppApp" pc="268438536" symbol="onStop"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="31" lineNum="44" parent="globals/GarminHueHeartbeatAppView" pc="268438539" symbol="onShow"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="31" lineNum="45" parent="globals/GarminHueHeartbeatAppView" pc="268438541" symbol="onShow"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="31" lineNum="46" parent="globals/GarminHueHeartbeatAppView" pc="268438565" symbol="onShow"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="74" parent="globals/GarminHueHeartbeatAppView" pc="268438573" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="75" parent="globals/GarminHueHeartbeatAppView" pc="268438576" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="76" parent="globals/GarminHueHeartbeatAppView" pc="268438583" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="78" parent="globals/GarminHueHeartbeatAppView" pc="268438604" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="79" parent="globals/GarminHueHeartbeatAppView" pc="268438611" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="80" parent="globals/GarminHueHeartbeatAppView" pc="268438625" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="81" parent="globals/GarminHueHeartbeatAppView" pc="268438644" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="83" parent="globals/GarminHueHeartbeatAppView" pc="268438650" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="85" parent="globals/GarminHueHeartbeatAppView" pc="268438664" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="86" parent="globals/GarminHueHeartbeatAppView" pc="268438683" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="87" parent="globals/GarminHueHeartbeatAppView" pc="268438689" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="89" parent="globals/GarminHueHeartbeatAppView" pc="268438703" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="93" parent="globals/GarminHueHeartbeatAppView" pc="268438717" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="95" parent="globals/GarminHueHeartbeatAppView" pc="268438731" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="96" parent="globals/GarminHueHeartbeatAppView" pc="268438739" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="97" parent="globals/GarminHueHeartbeatAppView" pc="268438754" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="98" parent="globals/GarminHueHeartbeatAppView" pc="268438762" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="99" parent="globals/GarminHueHeartbeatAppView" pc="268438774" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="100" parent="globals/GarminHueHeartbeatAppView" pc="268438789" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="101" parent="globals/GarminHueHeartbeatAppView" pc="268438797" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="102" parent="globals/GarminHueHeartbeatAppView" pc="268438822" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="103" parent="globals/GarminHueHeartbeatAppView" pc="268438862" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="104" parent="globals/GarminHueHeartbeatAppView" pc="268438882" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="105" parent="globals/GarminHueHeartbeatAppView" pc="268438892" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="106" parent="globals/GarminHueHeartbeatAppView" pc="268438902" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="108" parent="globals/GarminHueHeartbeatAppView" pc="268438951" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="109" parent="globals/GarminHueHeartbeatAppView" pc="268438977" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="110" parent="globals/GarminHueHeartbeatAppView" pc="268438996" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="112" parent="globals/GarminHueHeartbeatAppView" pc="268439008" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="113" parent="globals/GarminHueHeartbeatAppView" pc="268439020" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="115" parent="globals/GarminHueHeartbeatAppView" pc="268439034" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="117" parent="globals/GarminHueHeartbeatAppView" pc="268439045" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="118" parent="globals/GarminHueHeartbeatAppView" pc="268439053" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="119" parent="globals/GarminHueHeartbeatAppView" pc="268439072" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="120" parent="globals/GarminHueHeartbeatAppView" pc="268439078" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="122" parent="globals/GarminHueHeartbeatAppView" pc="268439093" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="124" parent="globals/GarminHueHeartbeatAppView" pc="268439108" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="125" parent="globals/GarminHueHeartbeatAppView" pc="268439116" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="127" parent="globals/GarminHueHeartbeatAppView" pc="268439128" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="129" parent="globals/GarminHueHeartbeatAppView" pc="268439143" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="32" lineNum="130" parent="globals/GarminHueHeartbeatAppView" pc="268439167" symbol="runLogic"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="33" lineNum="39" parent="globals/GarminHueHeartbeatAppView" pc="268439179" symbol="onLayout"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="33" lineNum="40" parent="globals/GarminHueHeartbeatAppView" pc="268439181" symbol="onLayout"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="33" lineNum="41" parent="globals/GarminHueHeartbeatAppView" pc="268439214" symbol="onLayout"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="34" lineNum="61" parent="globals/GarminHueHeartbeatAppView" pc="268439235" symbol="setMessage"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="34" lineNum="62" parent="globals/GarminHueHeartbeatAppView" pc="268439237" symbol="setMessage"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="34" lineNum="63" parent="globals/GarminHueHeartbeatAppView" pc="268439246" symbol="setMessage"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="35" lineNum="30" parent="globals/GarminHueHeartbeatAppView" pc="268439258" symbol="setRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="35" lineNum="31" parent="globals/GarminHueHeartbeatAppView" pc="268439260" symbol="setRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="36" lineNum="66" parent="globals/GarminHueHeartbeatAppView" pc="268439270" symbol="setState"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="36" lineNum="67" parent="globals/GarminHueHeartbeatAppView" pc="268439272" symbol="setState"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="36" lineNum="68" parent="globals/GarminHueHeartbeatAppView" pc="268439283" symbol="setState"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="36" lineNum="69" parent="globals/GarminHueHeartbeatAppView" pc="268439292" symbol="setState"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="36" lineNum="70" parent="globals/GarminHueHeartbeatAppView" pc="268439316" symbol="setState"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="37" lineNum="34" parent="globals/GarminHueHeartbeatAppView" pc="268439327" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="37" lineNum="35" parent="globals/GarminHueHeartbeatAppView" pc="268439329" symbol="getRooms"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="38" lineNum="24" parent="globals/GarminHueHeartbeatAppView" pc="268439335" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="38" lineNum="25" parent="globals/GarminHueHeartbeatAppView" pc="268439337" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="38" lineNum="26" parent="globals/GarminHueHeartbeatAppView" pc="268439349" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="38" lineNum="27" parent="globals/GarminHueHeartbeatAppView" pc="268439358" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="39" lineNum="49" parent="globals/GarminHueHeartbeatAppView" pc="268439374" symbol="onHide"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="39" lineNum="50" parent="globals/GarminHueHeartbeatAppView" pc="268439376" symbol="onHide"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="40" lineNum="54" parent="globals/GarminHueHeartbeatAppView" pc="268439395" symbol="onUpdate"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="40" lineNum="55" parent="globals/GarminHueHeartbeatAppView" pc="268439397" symbol="onUpdate"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="40" lineNum="56" parent="globals/GarminHueHeartbeatAppView" pc="268439406" symbol="onUpdate"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppView.mc" id="40" lineNum="58" parent="globals/GarminHueHeartbeatAppView" pc="268439428" symbol="onUpdate"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="41" lineNum="10" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439445" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="41" lineNum="11" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439447" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="41" lineNum="12" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439459" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="41" lineNum="13" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439468" symbol="initialize"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="16" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439478" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="17" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439481" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="18" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439490" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="19" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439507" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="20" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439525" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="21" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439540" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="22" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439557" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="24" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439575" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="25" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439586" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="26" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439613" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="28" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439628" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="29" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439641" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="30" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439647" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="31" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439654" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="32" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439664" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="33" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439680" symbol="onSelect"/>
+<entry filename="C:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\source\\GarminHueHeartbeatAppMenuDelegate.mc" id="42" lineNum="36" parent="globals/GarminHueHeartbeatAppMenuDelegate" pc="268439710" symbol="onSelect"/>
+<entry filename="c:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="43" lineNum="13" parent="globals/Rez/Layouts" pc="268439726" symbol="MainLayout"/>
+<entry filename="c:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="43" lineNum="14" parent="globals/Rez/Layouts" pc="268439737" symbol="MainLayout"/>
+<entry filename="c:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="43" lineNum="16" parent="globals/Rez/Layouts" pc="268439853" symbol="MainLayout"/>
+<entry filename="c:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="44" lineNum="21" parent="globals/Rez/Menus/MainMenu" pc="268439863" symbol="&lt;init&gt;"/>
+<entry filename="c:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="45" lineNum="22" parent="globals/Rez/Menus/MainMenu" pc="268439875" symbol="initialize"/>
+<entry filename="c:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="45" lineNum="23" parent="globals/Rez/Menus/MainMenu" pc="268439877" symbol="initialize"/>
+<entry filename="c:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="45" lineNum="24" parent="globals/Rez/Menus/MainMenu" pc="268439889" symbol="initialize"/>
+<entry filename="c:\\Users\\okk19\\Documents\\Garmin Development OKK\\GarminHueHeartbeatApp\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="45" lineNum="25" parent="globals/Rez/Menus/MainMenu" pc="268439934" symbol="initialize"/>
+</pcToLineNum>
+<symbolTable>
+<entry field="true" id="59" symbol="clientId"/>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry id="8389346" symbol="text"/>
+<entry field="true" id="13" symbol="&lt;globals/HueController/&lt;&gt;_clientSecret&gt;"/>
+<entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+<entry field="true" id="18" symbol="&lt;globals/HueController/&lt;&gt;_view&gt;"/>
+<entry id="5" module="true" symbol="globals/Rez/Menus"/>
+<entry id="51" method="true" symbol="setMessage"/>
+<entry field="true" id="44" symbol="STATE_SELECT_ROOM"/>
+<entry field="true" id="48" symbol="&lt;globals/GarminHueHeartbeatAppView/&lt;&gt;_rooms&gt;"/>
+<entry id="56" method="true" symbol="MainLayout"/>
+<entry id="11" object="true" symbol="HueController"/>
+<entry field="true" id="12" symbol="&lt;globals/HueController/&lt;&gt;_clientId&gt;"/>
+<entry id="8390424" module="true" symbol="Storage"/>
+<entry field="true" id="15" symbol="&lt;globals/HueController/&lt;&gt;_refreshToken&gt;"/>
+<entry field="true" id="14" symbol="&lt;globals/HueController/&lt;&gt;_redirectUrl&gt;"/>
+<entry id="8389782" module="true" symbol="StringUtil"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry field="true" id="45" symbol="&lt;globals/GarminHueHeartbeatAppView/&lt;&gt;_controller&gt;"/>
+<entry id="22" method="true" symbol="getRooms"/>
+<entry id="8390200" method="true" symbol="onOAuthResponse"/>
+<entry field="true" id="58" symbol="AppName"/>
+<entry id="6" module="true" symbol="globals/Rez/Strings"/>
+<entry id="8389594" symbol="headers"/>
+<entry id="8389080" method="true" symbol="onMenu"/>
+<entry id="25" method="true" symbol="onGetRoomsResponse"/>
+<entry field="true" id="41" symbol="STATE_FETCHING_DATA"/>
+<entry id="10" object="true" symbol="GarminHueHeartbeatAppView"/>
+<entry id="8391867" module="true" symbol="Authentication"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry id="27" method="true" symbol="onTokenResponse"/>
+<entry field="true" id="53" symbol="&lt;globals/GarminHueHeartbeatAppMenuDelegate/&lt;&gt;_controller&gt;"/>
+<entry id="31" method="true" symbol="setView"/>
+<entry id="2" module="true" symbol="globals/Rez"/>
+<entry field="true" id="63" symbol="prompt"/>
+<entry id="50" method="true" symbol="runLogic"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry field="true" id="8389065" symbol="locY"/>
+<entry field="true" id="8389064" symbol="locX"/>
+<entry field="true" id="17" symbol="&lt;globals/HueController/&lt;&gt;_tokenExpires&gt;"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="8389348" symbol="font"/>
+<entry id="7" object="true" symbol="GarminHueHeartbeatAppApp"/>
+<entry id="65" symbol="item_2"/>
+<entry id="64" symbol="item_1"/>
+<entry id="39" module="true" symbol="Menus"/>
+<entry id="8389275" method="true" symbol="getApp"/>
+<entry id="8" object="true" symbol="GarminHueHeartbeatAppDelegate"/>
+<entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+<entry id="37" method="true" symbol="onOAuthMessage"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry id="30" method="true" symbol="setSelectedRoomId"/>
+<entry id="21" method="true" symbol="exchangeCodeForToken"/>
+<entry field="true" id="8389063" symbol="identifier"/>
+<entry id="8389349" symbol="justification"/>
+<entry id="24" method="true" symbol="onEnableLinkButtonResponse"/>
+<entry id="8388637" module="true" symbol="Communications"/>
+<entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+<entry field="true" id="49" symbol="&lt;globals/GarminHueHeartbeatAppView/&lt;&gt;_textLabel&gt;"/>
+<entry id="57" object="true" symbol="MainMenu"/>
+<entry id="8389903" method="true" symbol="setState"/>
+<entry id="29" method="true" symbol="setHeartRate"/>
+<entry id="8389844" symbol="responseType"/>
+<entry id="8388786" method="true" symbol="method"/>
+<entry id="8388644" module="true" symbol="System"/>
+<entry field="true" id="33" symbol="_hueController"/>
+<entry id="8389619" method="true" symbol="onSelect"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry field="true" id="43" symbol="STATE_RUNNING"/>
+<entry id="20" method="true" symbol="enableLinkButton"/>
+<entry field="true" id="60" symbol="clientSecret"/>
+<entry field="true" id="47" symbol="&lt;globals/GarminHueHeartbeatAppView/&lt;&gt;_message&gt;"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="26" method="true" symbol="onRegisterApplicationResponse"/>
+<entry field="true" id="54" symbol="&lt;globals/GarminHueHeartbeatAppMenuDelegate/&lt;&gt;_view&gt;"/>
+<entry field="true" id="55" symbol="LauncherIcon"/>
+<entry id="8388610" symbol="statics"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry id="36" method="true" symbol="getHueController"/>
+<entry field="true" id="46" symbol="&lt;globals/GarminHueHeartbeatAppView/&lt;&gt;_currentState&gt;"/>
+<entry id="32" method="true" symbol="startRegistration"/>
+<entry id="8389350" module="true" symbol="globals"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry field="true" id="34" symbol="_view"/>
+<entry id="8389953" module="true" symbol="PersistedContent"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry id="9" object="true" symbol="GarminHueHeartbeatAppMenuDelegate"/>
+<entry field="true" id="40" symbol="STATE_ERROR"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry field="true" id="8389347" symbol="color"/>
+<entry field="true" id="42" symbol="STATE_LOGGED_OUT"/>
+<entry id="28" method="true" symbol="registerApplication"/>
+<entry id="8388646" module="true" object="true" symbol="Timer"/>
+<entry id="38" module="true" symbol="Layouts"/>
+<entry id="19" method="true" symbol="authorize"/>
+<entry field="true" id="35" symbol="_delegate"/>
+<entry field="true" id="16" symbol="&lt;globals/HueController/&lt;&gt;_token&gt;"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry id="8388635" module="true" symbol="Application"/>
+<entry field="true" id="8389642" symbol="title"/>
+<entry id="23" method="true" symbol="hasTokens"/>
+<entry field="true" id="62" symbol="menu_label_2"/>
+<entry field="true" id="61" symbol="menu_label_1"/>
+<entry id="52" method="true" symbol="setRooms"/>
+</symbolTable>
+<localVars>
+<entry arg="true" endPc="268435688" name="responseCode" stackId="1" startPc="268435549"/>
+<entry arg="true" endPc="268435688" name="data" stackId="2" startPc="268435549"/>
+<entry arg="true" endPc="268436039" name="responseCode" stackId="1" startPc="268435689"/>
+<entry arg="true" endPc="268436039" name="data" stackId="2" startPc="268435689"/>
+<entry endPc="268435956" name="rooms" stackId="3" startPc="268435737"/>
+<entry endPc="268435956" name="dataDict" stackId="4" startPc="268435737"/>
+<entry endPc="268435901" name="roomsData" stackId="5" startPc="268435762"/>
+<entry endPc="268435901" name="i" stackId="6" startPc="268435788"/>
+<entry endPc="268435891" name="roomData" stackId="7" startPc="268435788"/>
+<entry endPc="268435888" name="metadata" stackId="8" startPc="268435836"/>
+<entry endPc="268436093" name="accessToken" stackId="1" startPc="268436043"/>
+<entry endPc="268436093" name="refreshToken" stackId="2" startPc="268436043"/>
+<entry arg="true" endPc="268436505" name="responseCode" stackId="1" startPc="268436094"/>
+<entry arg="true" endPc="268436505" name="data" stackId="2" startPc="268436094"/>
+<entry endPc="268436422" name="tokenData" stackId="3" startPc="268436142"/>
+<entry endPc="268436422" name="expiresIn" stackId="4" startPc="268436142"/>
+<entry endPc="268436422" name="appKey" stackId="5" startPc="268436142"/>
+<entry endPc="268436671" name="accessToken" stackId="1" startPc="268436537"/>
+<entry endPc="268436671" name="url" stackId="2" startPc="268436537"/>
+<entry endPc="268436671" name="params" stackId="3" startPc="268436537"/>
+<entry endPc="268436671" name="options" stackId="4" startPc="268436537"/>
+<entry arg="true" endPc="268436716" name="roomId" stackId="1" startPc="268436673"/>
+<entry arg="true" endPc="268437113" name="responseCode" stackId="1" startPc="268436717"/>
+<entry arg="true" endPc="268437113" name="data" stackId="2" startPc="268436717"/>
+<entry endPc="268437051" name="dataArray" stackId="3" startPc="268436750"/>
+<entry endPc="268436993" name="responseDict" stackId="4" startPc="268436773"/>
+<entry endPc="268436892" name="successData" stackId="5" startPc="268436796"/>
+<entry endPc="268436892" name="appKey" stackId="6" startPc="268436796"/>
+<entry endPc="268436990" name="errorData" stackId="7" startPc="268436913"/>
+<entry endPc="268436990" name="errorDescription" stackId="8" startPc="268436913"/>
+<entry arg="true" endPc="268437125" name="view" stackId="1" startPc="268437114"/>
+<entry arg="true" endPc="268437286" name="authCode" stackId="1" startPc="268437129"/>
+<entry endPc="268437285" name="url" stackId="2" startPc="268437132"/>
+<entry endPc="268437285" name="params" stackId="3" startPc="268437132"/>
+<entry endPc="268437285" name="basicAuth" stackId="4" startPc="268437132"/>
+<entry endPc="268437285" name="options" stackId="5" startPc="268437132"/>
+<entry endPc="268437535" name="accessToken" stackId="1" startPc="268437290"/>
+<entry endPc="268437535" name="appKey" stackId="2" startPc="268437290"/>
+<entry endPc="268437535" name="url" stackId="3" startPc="268437290"/>
+<entry endPc="268437535" name="params" stackId="4" startPc="268437290"/>
+<entry endPc="268437535" name="options" stackId="5" startPc="268437290"/>
+<entry endPc="268437765" name="accessToken" stackId="1" startPc="268437631"/>
+<entry endPc="268437765" name="url" stackId="2" startPc="268437631"/>
+<entry endPc="268437765" name="params" stackId="3" startPc="268437631"/>
+<entry endPc="268437765" name="options" stackId="4" startPc="268437631"/>
+<entry arg="true" endPc="268437909" name="data" stackId="1" startPc="268437767"/>
+<entry endPc="268437832" name="authCode" stackId="2" startPc="268437812"/>
+<entry endPc="268437963" name="params" stackId="1" startPc="268437913"/>
+<entry endPc="268438159" name="menu" stackId="1" startPc="268437968"/>
+<entry arg="true" endPc="268438192" name="hueController" stackId="1" startPc="268438160"/>
+<entry arg="true" endPc="268438192" name="view" stackId="2" startPc="268438160"/>
+<entry arg="true" endPc="268438249" name="state" stackId="1" startPc="268438193"/>
+<entry arg="true" endPc="268438373" name="message" stackId="1" startPc="268438250"/>
+<entry endPc="268439177" name="state" stackId="1" startPc="268438576"/>
+<entry endPc="268438713" name="appKey" stackId="2" startPc="268438625"/>
+<entry endPc="268438713" name="selectedRoomId" stackId="3" startPc="268438664"/>
+<entry endPc="268439004" name="menu" stackId="4" startPc="268438822"/>
+<entry endPc="268438950" name="i" stackId="5" startPc="268438882"/>
+<entry endPc="268438940" name="room" stackId="6" startPc="268438882"/>
+<entry endPc="268438940" name="roomName" stackId="7" startPc="268438882"/>
+<entry endPc="268439004" name="delegate" stackId="8" startPc="268438822"/>
+<entry endPc="268439104" name="selectedRoomId" stackId="9" startPc="268439053"/>
+<entry arg="true" endPc="268439234" name="dc" stackId="1" startPc="268439179"/>
+<entry arg="true" endPc="268439257" name="message" stackId="1" startPc="268439235"/>
+<entry arg="true" endPc="268439269" name="rooms" stackId="1" startPc="268439258"/>
+<entry arg="true" endPc="268439326" name="state" stackId="1" startPc="268439270"/>
+<entry arg="true" endPc="268439373" name="hueController" stackId="1" startPc="268439335"/>
+<entry arg="true" endPc="268439444" name="dc" stackId="1" startPc="268439395"/>
+<entry arg="true" endPc="268439477" name="controller" stackId="1" startPc="268439445"/>
+<entry arg="true" endPc="268439477" name="view" stackId="2" startPc="268439445"/>
+<entry arg="true" endPc="268439725" name="item" stackId="1" startPc="268439478"/>
+<entry endPc="268439724" name="id" stackId="2" startPc="268439481"/>
+<entry endPc="268439706" name="rooms" stackId="3" startPc="268439628"/>
+<entry endPc="268439703" name="selectedRoom" stackId="4" startPc="268439647"/>
+<entry endPc="268439703" name="selectedRoomId" stackId="5" startPc="268439647"/>
+<entry arg="true" endPc="268439862" name="dc" stackId="1" startPc="268439726"/>
+<entry endPc="268439862" name="rez_cmp_local_text_HeartRateLabel" stackId="2" startPc="268439737"/>
+</localVars>
+<deviceInfo deviceVersion="8fc30743a4191ec19bcafa28e3ffcc2b5a958a17" partNumber="006-B4536-00"/>
+<annotations>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="clientSecret"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_2"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="clientId"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_1"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="prompt"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+</annotations>
+<dataEntryOffsetMappings>
+<dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/HueController" offset="161" parentId="globals" symbolId="HueController" type="class"/>
+<dataEntry label="globals/GarminHueHeartbeatAppDelegate" offset="403" parentId="globals" symbolId="GarminHueHeartbeatAppDelegate" type="class"/>
+<dataEntry label="globals/GarminHueHeartbeatAppApp" offset="474" parentId="globals" symbolId="GarminHueHeartbeatAppApp" type="class"/>
+<dataEntry label="globals/Rez" offset="590" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/GarminHueHeartbeatAppView" offset="652" parentId="globals" symbolId="GarminHueHeartbeatAppView" type="class"/>
+<dataEntry label="globals/GarminHueHeartbeatAppMenuDelegate" offset="867" parentId="globals" symbolId="GarminHueHeartbeatAppMenuDelegate" type="class"/>
+<dataEntry label="globals/Rez/Drawables" offset="938" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="973" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/Menus" offset="1008" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="1043" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry label="globals/Rez/Menus/MainMenu" offset="1123" parentId="Menus" symbolId="MainMenu" type="class"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="HueController">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435480" name="getApp" startPc="268435460">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435492" name="&lt;init&gt;" parent="GarminHueHeartbeatAppDelegate" startPc="268435481">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435504" name="&lt;init&gt;" parent="GarminHueHeartbeatAppApp" startPc="268435493">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435524" name="&lt;init&gt;" parent="Rez" startPc="268435505">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435536" name="&lt;init&gt;" parent="GarminHueHeartbeatAppView" startPc="268435525">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435548" name="&lt;init&gt;" parent="GarminHueHeartbeatAppMenuDelegate" startPc="268435537">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435688" name="onEnableLinkButtonResponse" parent="HueController" startPc="268435549">
+<param id="responseCode"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436039" name="onGetRoomsResponse" parent="HueController" startPc="268435689">
+<param id="responseCode"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436093" name="hasTokens" parent="HueController" startPc="268436040">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436505" name="onTokenResponse" parent="HueController" startPc="268436094">
+<param id="responseCode"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436533" name="startRegistration" parent="HueController" startPc="268436506">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436672" name="registerApplication" parent="HueController" startPc="268436534">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436716" name="setSelectedRoomId" parent="HueController" startPc="268436673">
+<param id="roomId"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437113" name="onRegisterApplicationResponse" parent="HueController" startPc="268436717">
+<param id="responseCode"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437125" name="setView" parent="HueController" startPc="268437114">
+<param id="view"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437128" name="setHeartRate" parent="HueController" startPc="268437126">
+<param id="hr"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437286" name="exchangeCodeForToken" parent="HueController" startPc="268437129">
+<param id="authCode"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437536" name="getRooms" parent="HueController" startPc="268437287">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437627" name="initialize" parent="HueController" startPc="268437537">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437766" name="enableLinkButton" parent="HueController" startPc="268437628">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437909" name="onOAuthResponse" parent="HueController" startPc="268437767">
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437964" name="authorize" parent="HueController" startPc="268437910">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438159" name="onMenu" parent="GarminHueHeartbeatAppDelegate" startPc="268437965">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438192" name="initialize" parent="GarminHueHeartbeatAppDelegate" startPc="268438160">
+<param id="hueController"/>
+<param id="view"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438249" name="onStart" parent="GarminHueHeartbeatAppApp" startPc="268438193">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438373" name="onOAuthMessage" parent="GarminHueHeartbeatAppApp" startPc="268438250">
+<param id="message"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438396" name="getInitialView" parent="GarminHueHeartbeatAppApp" startPc="268438374">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438527" name="initialize" parent="GarminHueHeartbeatAppApp" startPc="268438397">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438535" name="getHueController" parent="GarminHueHeartbeatAppApp" startPc="268438528">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438538" name="onStop" parent="GarminHueHeartbeatAppApp" startPc="268438536">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438572" name="onShow" parent="GarminHueHeartbeatAppView" startPc="268438539">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439178" name="runLogic" parent="GarminHueHeartbeatAppView" startPc="268438573">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439234" name="onLayout" parent="GarminHueHeartbeatAppView" startPc="268439179">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439257" name="setMessage" parent="GarminHueHeartbeatAppView" startPc="268439235">
+<param id="message"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439269" name="setRooms" parent="GarminHueHeartbeatAppView" startPc="268439258">
+<param id="rooms"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439326" name="setState" parent="GarminHueHeartbeatAppView" startPc="268439270">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439334" name="getRooms" parent="GarminHueHeartbeatAppView" startPc="268439327">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439373" name="initialize" parent="GarminHueHeartbeatAppView" startPc="268439335">
+<param id="hueController"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439394" name="onHide" parent="GarminHueHeartbeatAppView" startPc="268439374">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439444" name="onUpdate" parent="GarminHueHeartbeatAppView" startPc="268439395">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439477" name="initialize" parent="GarminHueHeartbeatAppMenuDelegate" startPc="268439445">
+<param id="controller"/>
+<param id="view"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439725" name="onSelect" parent="GarminHueHeartbeatAppMenuDelegate" startPc="268439478">
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439862" name="MainLayout" parent="Layouts" startPc="268439726">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439874" name="&lt;init&gt;" parent="MainMenu" startPc="268439863">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439979" name="initialize" parent="MainMenu" startPc="268439875">
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>
