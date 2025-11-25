@@ -24,7 +24,7 @@ class HueController {
     function initialize() {
         _clientId = WatchUi.loadResource(Rez.Strings.clientId) as Lang.String;
         _clientSecret = WatchUi.loadResource(Rez.Strings.clientSecret) as Lang.String;
-        _redirectUrl = "https://localhost";
+        _redirectUrl = "https://connect.garmin.com/modern/oauth-callback";
     }
 
     function setView(view as GarminHueHeartbeatAppView) as Void {
@@ -50,7 +50,8 @@ class HueController {
         var url = "https://api.meethue.com/v2/oauth2/token";
         var params = {
             "grant_type" => "authorization_code",
-            "code" => authCode
+            "code" => authCode,
+            "redirect_uri" => _redirectUrl
         };
 
         // The Hue API requires Basic authentication for this step.
@@ -74,7 +75,8 @@ class HueController {
             "scope" => "basic.clip",
             "response_type" => "code",
             "client_id" => _clientId,
-            "state" => "garmin-hue"
+            "state" => "garmin-hue",
+            "redirect_uri" => _redirectUrl
         };
 
         // This request will open a webview on the user's phone.

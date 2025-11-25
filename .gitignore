@@ -1,0 +1,6 @@
+# Garmin Connect IQ build output
+/bin/
+/export/
+
+# Application secrets - DO NOT COMMIT
+/resources/strings/strings.xml

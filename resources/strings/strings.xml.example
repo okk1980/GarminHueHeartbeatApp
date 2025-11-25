@@ -1,0 +1,13 @@
+<strings>
+    <string id="AppName">GarminHueHeartbeatApp</string>
+
+    <!--
+        Enter the Client ID and Client Secret for your Hue Remote API credential.
+        https://developers.meethue.com/
+        NOTE: This file is an example. Copy it to 'strings.xml' and fill in your actual values.
+        The 'strings.xml' file is ignored by git to protect your secrets.
+    -->
+    <string id="clientId">YOUR_HUE_CLIENT_ID_HERE</string>
+    <string id="clientSecret">YOUR_HUE_CLIENT_SECRET_HERE</string>
+
+</strings>
